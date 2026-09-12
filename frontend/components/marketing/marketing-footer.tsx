@@ -34,7 +34,7 @@ export function MarketingFooter() {
           </div>
 
           {/* Links Grid */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 text-sm">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 text-sm">
             <div>
               <p className="font-semibold text-foreground mb-3">Product</p>
               <ul className="space-y-2 text-muted-foreground">
@@ -45,7 +45,7 @@ export function MarketingFooter() {
                 </li>
                 <li>
                   <Link href="/pricing" className="hover:text-foreground transition-colors">
-                    Pricing & Plans
+                    Pricing &amp; Plans
                   </Link>
                 </li>
                 <li>
@@ -67,7 +67,74 @@ export function MarketingFooter() {
             </div>
 
             <div>
-              <p className="font-semibold text-foreground mb-3">Company & Support</p>
+              <p className="font-semibold text-foreground mb-3">Features</p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>
+                  <Link href="/features/lead-discovery" className="hover:text-foreground transition-colors">
+                    B2B Lead Finder
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/features/crm-outreach" className="hover:text-foreground transition-colors">
+                    Cold Outreach CRM
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/features/map-search" className="hover:text-foreground transition-colors">
+                    Map-Based Prospecting
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/features/automation" className="hover:text-foreground transition-colors">
+                    Sales Automation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/use-cases/agencies" className="hover:text-foreground transition-colors">
+                    For Agencies
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/use-cases/sales-teams" className="hover:text-foreground transition-colors">
+                    For Sales Teams
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/use-cases/freelancers" className="hover:text-foreground transition-colors">
+                    For Freelancers
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-semibold text-foreground mb-3">Compare</p>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>
+                  <Link href="/compare/apollo-alternative" className="hover:text-foreground transition-colors">
+                    vs Apollo.io
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/compare/hunter-alternative" className="hover:text-foreground transition-colors">
+                    vs Hunter.io
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/compare/lusha-alternative" className="hover:text-foreground transition-colors">
+                    vs Lusha
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/compare/zoominfo-alternative" className="hover:text-foreground transition-colors">
+                    vs ZoomInfo
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <p className="font-semibold text-foreground mb-3">Company &amp; Support</p>
               <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <Link href="/contact" className="hover:text-foreground transition-colors">
@@ -81,7 +148,7 @@ export function MarketingFooter() {
                 </li>
                 <li>
                   <Link href="/contact" className="hover:text-foreground transition-colors">
-                    Support & Help Desk
+                    Support &amp; Help Desk
                   </Link>
                 </li>
                 <li>
@@ -89,12 +156,6 @@ export function MarketingFooter() {
                     Customer Portal
                   </a>
                 </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="font-semibold text-foreground mb-3">Legal & Policies</p>
-              <ul className="space-y-2 text-muted-foreground">
                 <li>
                   <Link href="/terms" className="hover:text-foreground transition-colors">
                     Terms of Service
@@ -107,7 +168,7 @@ export function MarketingFooter() {
                 </li>
                 <li>
                   <Link href="/refund" className="hover:text-foreground transition-colors">
-                    Refund & Cancellation
+                    Refund &amp; Cancellation
                   </Link>
                 </li>
               </ul>

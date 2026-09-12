@@ -3,6 +3,7 @@ import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import "leaflet/dist/leaflet.css";
 import "./globals.css";
 import { Providers } from "./providers";
+import { JsonLd, organizationSchema, softwareAppSchema } from "@/components/seo/JsonLd";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -24,10 +25,66 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
+const BASE_URL = "https://getyourclientsb2b.com";
+
 export const metadata: Metadata = {
-  title: "GetYourClients — Find your next client, anywhere",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+    template: "%s | GetYourClientsB2B",
+  },
   description:
-    "GetYourClients is the B2B discovery and outreach CRM for teams selling across borders: search leads by industry and country, work them on a map, and run outreach from one dashboard.",
+    "GetYourClientsB2B is the B2B client discovery platform for teams selling across borders. Search leads by industry and country, work them on a map, and run cold outreach from one dashboard.",
+  keywords: [
+    "B2B client discovery tool",
+    "B2B lead generation software",
+    "cold outreach CRM",
+    "find B2B leads by industry",
+    "B2B prospecting platform",
+    "sales outreach automation software",
+    "B2B lead finder tool",
+  ],
+  authors: [{ name: "GetYourClientsB2B", url: BASE_URL }],
+  creator: "GetYourClientsB2B",
+  publisher: "GetYourClientsB2B",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: BASE_URL,
+    siteName: "GetYourClientsB2B",
+    title: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+    description:
+      "Find, qualify, and close B2B clients across 190+ countries. Map-based lead discovery, industry filters, and cold outreach CRM — all in one platform.",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — B2B Client Discovery Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+    description:
+      "Find, qualify, and close B2B clients across 190+ countries. Map-based lead discovery, industry filters, and cold outreach CRM — all in one platform.",
+    images: ["/images/og-image.png"],
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
   icons: {
     icon: "/images/logo_image.png",
     shortcut: "/images/logo_image.png",
@@ -42,6 +99,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/images/logo_image.png" />
       </head>
       <body className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
+        <JsonLd data={organizationSchema()} />
+        <JsonLd data={softwareAppSchema()} />
         <Providers>{children}</Providers>
       </body>
     </html>

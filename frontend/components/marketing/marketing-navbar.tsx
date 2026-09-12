@@ -13,7 +13,8 @@ export function MarketingNavbar() {
 
   const navItems = [
     { label: "Product", href: "/#product" },
-    { label: "Features", href: "/#features" },
+    { label: "Features", href: "/features/lead-discovery" },
+    { label: "Compare", href: "/compare/apollo-alternative" },
     { label: "Pricing", href: "/pricing" },
     { label: "Contact", href: "/contact" },
   ];

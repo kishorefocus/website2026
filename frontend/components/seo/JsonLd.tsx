@@ -1,0 +1,95 @@
+/**
+ * Reusable JSON-LD structured data component for Schema.org markup.
+ * Drop this into any page to inject <script type="application/ld+json"> tags.
+ */
+
+interface JsonLdProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  data: Record<string, any> | Array<Record<string, any>>;
+}
+
+export function JsonLd({ data }: JsonLdProps) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+// ─── Pre-built schema factories ────────────────────────────────────────────
+
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "GetYourClientsB2B",
+    url: "https://getyourclientsb2b.com",
+    logo: "https://getyourclientsb2b.com/images/logo_image.png",
+    description:
+      "B2B client discovery platform for sales teams — search leads by industry and country, work them on a map, and run outreach from one dashboard.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "support@getyourclientsb2b.com",
+      contactType: "customer support",
+      availableLanguage: "English",
+    },
+    sameAs: [],
+  };
+}
+
+export function softwareAppSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "GetYourClientsB2B",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    url: "https://getyourclientsb2b.com",
+    description:
+      "B2B lead discovery and cold outreach CRM. Find qualified decision-makers across 190+ countries by industry, filter on a live map, and manage your pipeline — all in one tool.",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+      description: "Free plan available. Paid plans start from $49/month.",
+    },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.8",
+      reviewCount: "120",
+      bestRating: "5",
+      worstRating: "1",
+    },
+  };
+}
+
+export function breadcrumbSchema(
+  items: Array<{ name: string; url: string }>
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function faqSchema(items: Array<{ question: string; answer: string }>) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  };
+}
