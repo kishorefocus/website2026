@@ -3,6 +3,7 @@ import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
 import { ShieldCheck, RefreshCw, XCircle, Mail } from "lucide-react";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy — GetYourClients",
@@ -90,7 +91,7 @@ export default function RefundPolicyPage() {
               <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-2">
                 <p className="font-semibold text-foreground">How to cancel your subscription:</p>
                 <ol className="list-decimal pl-5 space-y-1">
-                  <li>Log in to your account at <Link href="/login" className="text-primary underline">https://getyourclientsb2b.com/login</Link>.</li>
+                  <li>Log in to your account at <a href={APP_LOGIN_URL} target="_blank" rel="noopener noreferrer" className="text-primary underline font-medium">https://app.getyourclientsb2b.com/login</a>.</li>
                   <li>Navigate to <strong>Dashboard &gt; Settings &gt; Billing</strong>.</li>
                   <li>Click on <strong>&quot;Cancel Subscription&quot;</strong> or switch to the Free plan.</li>
                   <li>Confirm the cancellation.</li>

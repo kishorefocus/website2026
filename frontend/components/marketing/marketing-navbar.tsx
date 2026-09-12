@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 export function MarketingNavbar() {
   const pathname = usePathname();
@@ -60,17 +61,22 @@ export function MarketingNavbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2.5">
-          <Link href="/contact">
+        <div className="flex items-center gap-2">
+          <Link href="/contact" className="hidden sm:inline-flex">
             <Button variant="ghost" size="sm" className="font-medium hover:bg-muted/80">
               Contact Sales
             </Button>
           </Link>
-          <Link href="/pricing">
+          <a href={APP_LOGIN_URL}>
+            <Button variant="ghost" size="sm" className="font-medium hover:bg-muted/80 text-foreground">
+              Log in
+            </Button>
+          </a>
+          <a href={APP_LOGIN_URL}>
             <Button size="sm" className="font-semibold shadow-md shadow-primary/20">
               Get started
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </header>

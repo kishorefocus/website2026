@@ -8,6 +8,7 @@ import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 const pricingPlans = [
   {
@@ -25,7 +26,7 @@ const pricingPlans = [
     ],
     popular: false,
     ctaText: "Start for free",
-    ctaLink: "/contact?plan=free",
+    ctaLink: APP_LOGIN_URL,
     variant: "outline" as const,
   },
   {
@@ -161,6 +162,14 @@ export default function PricingPage() {
                 </span>
               </div>
             </div>
+
+            {/* Already have an account callout */}
+            <div className="mt-6 text-center text-xs text-muted-foreground">
+              Already have an account?{" "}
+              <a href={APP_LOGIN_URL} className="font-semibold text-primary hover:underline inline-flex items-center gap-1">
+                Log in to your workspace <ArrowRight className="h-3 w-3" />
+              </a>
+            </div>
           </div>
 
           {/* Pricing Cards Grid */}
@@ -211,17 +220,31 @@ export default function PricingPage() {
                   </ul>
 
                   <div className="mt-8 pt-4">
-                    <Link href={plan.ctaLink} className="block w-full">
-                      <Button
-                        variant={plan.variant}
-                        className={cn(
-                          "w-full font-semibold",
-                          plan.popular && "shadow-lg shadow-primary/25"
-                        )}
-                      >
-                        {plan.ctaText}
-                      </Button>
-                    </Link>
+                    {plan.ctaLink.startsWith("http") ? (
+                      <a href={plan.ctaLink} className="block w-full">
+                        <Button
+                          variant={plan.variant}
+                          className={cn(
+                            "w-full font-semibold",
+                            plan.popular && "shadow-lg shadow-primary/25"
+                          )}
+                        >
+                          {plan.ctaText}
+                        </Button>
+                      </a>
+                    ) : (
+                      <Link href={plan.ctaLink} className="block w-full">
+                        <Button
+                          variant={plan.variant}
+                          className={cn(
+                            "w-full font-semibold",
+                            plan.popular && "shadow-lg shadow-primary/25"
+                          )}
+                        >
+                          {plan.ctaText}
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               );

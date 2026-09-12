@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MessageSquare, Clock, Building, CheckCircle2, Send, HelpCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -102,6 +103,19 @@ export default function ContactPage() {
                     <p>Payments reseller: Paddle.com</p>
                   </div>
                 </div>
+              </div>
+
+              {/* Quick Login Callout */}
+              <div className="rounded-2xl border border-border bg-card/60 p-5 shadow-subtle flex items-center justify-between">
+                <div>
+                  <h3 className="text-xs font-semibold text-foreground uppercase tracking-wider">Already a customer?</h3>
+                  <p className="text-xs text-muted-foreground mt-0.5">Access your live leads &amp; outreach pipeline</p>
+                </div>
+                <a href={APP_LOGIN_URL}>
+                  <Button size="sm" variant="outline" className="text-xs font-semibold">
+                    Platform Login →
+                  </Button>
+                </a>
               </div>
             </div>
 

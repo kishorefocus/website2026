@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { APP_LOGIN_URL } from "@/lib/constants";
 import {
   motion,
   useScroll,
@@ -234,7 +235,7 @@ const tiers = [
     period: "/month",
     features: ["3 free verified leads", "1 team seat", "Basic searches", "Standard CRM pipeline"],
     cta: "Start Free",
-    href: "/contact?plan=free",
+    href: APP_LOGIN_URL,
     featured: false,
   },
   {
@@ -421,18 +422,23 @@ export default function LandingPage() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Link href="/contact">
+          <Link href="/contact" className="hidden sm:inline-flex">
             <Button variant="ghost" size="sm" className="font-medium hover:bg-muted/80">
               Contact Sales
             </Button>
           </Link>
-          <Link href="/pricing">
+          <a href={APP_LOGIN_URL}>
+            <Button variant="ghost" size="sm" className="font-medium hover:bg-muted/80 text-foreground">
+              Log in
+            </Button>
+          </a>
+          <a href={APP_LOGIN_URL}>
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Button size="sm" className="shadow-[0_0_16px_hsl(228,100%,64%,0.35)] hover:shadow-[0_0_24px_hsl(228,100%,64%,0.5)] transition-shadow">
-                Explore Plans
+                Get started
               </Button>
             </motion.div>
-          </Link>
+          </a>
         </div>
       </motion.header>
 
@@ -495,7 +501,7 @@ export default function LandingPage() {
                   </Button>
                 </motion.div>
               </Link>
-              <a href="#product">
+              <a href={APP_LOGIN_URL}>
                 <motion.div whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.99 }}>
                   <Button size="lg" variant="outline" className="border-border/80">
                     Explore platform
@@ -523,8 +529,9 @@ export default function LandingPage() {
                 <InteractiveMap leads={mockLeads} />
 
                 {/* Overlay lead card */}
-                <motion.div
-                  className="absolute bottom-3 left-3 right-3 rounded-lg border border-border/60 bg-card/90 backdrop-blur-sm px-3 py-2.5 flex items-center gap-2.5 z-[500]"
+                <motion.a
+                  href={APP_LOGIN_URL}
+                  className="absolute bottom-3 left-3 right-3 rounded-lg border border-border/60 bg-card/90 backdrop-blur-sm px-3 py-2.5 flex items-center gap-2.5 z-[500] hover:border-primary/50 transition-colors group cursor-pointer"
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2, duration: 0.3, ease: EASE_OUT }}
@@ -533,11 +540,13 @@ export default function LandingPage() {
                     <Building2 className="h-3.5 w-3.5" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="text-xs font-semibold truncate">Find your dream clients</p>
+                    <p className="text-xs font-semibold truncate group-hover:text-primary transition-colors">Find your dream clients</p>
                     <p className="text-[10px] text-muted-foreground">Any country. Any industry. Any size.</p>
                   </div>
-                  <span className="shrink-0 deal-badge text-[10px]">GetYourClients</span>
-                </motion.div>
+                  <span className="shrink-0 deal-badge text-[10px] group-hover:bg-primary group-hover:text-white transition-colors">
+                    Launch Live App →
+                  </span>
+                </motion.a>
               </div>
             </div>
           </motion.div>
@@ -625,13 +634,13 @@ export default function LandingPage() {
           transition={{ duration: 0.3, ease: EASE_OUT }}
           viewport={{ once: true }}
         >
-          <Link href="/pricing">
+          <a href={APP_LOGIN_URL}>
             <motion.div className="inline-block" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
               <Button size="lg" className="shadow-[0_0_20px_hsl(228,100%,64%,0.35)] hover:shadow-[0_0_32px_hsl(228,100%,64%,0.5)] transition-shadow">
                 Start your outreach today <ArrowRight className="ml-1 h-4 w-4" />
               </Button>
             </motion.div>
-          </Link>
+          </a>
         </motion.div>
       </section>
 
@@ -749,7 +758,7 @@ export default function LandingPage() {
 
               <div className="mt-4 flex items-center justify-between">
                 <span className="manifest-chip">{ind.metric}</span>
-                <Link href="/pricing">
+                <a href={APP_LOGIN_URL}>
                   <motion.button
                     className={cn(
                       "flex items-center gap-1 text-xs font-semibold transition-colors duration-150 opacity-0 group-hover:opacity-100",
@@ -760,7 +769,7 @@ export default function LandingPage() {
                   >
                     Get started <ArrowRight className="h-3 w-3" />
                   </motion.button>
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -774,12 +783,12 @@ export default function LandingPage() {
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
-          <Link href="/pricing">
+          <a href={APP_LOGIN_URL}>
             <Button variant="outline" size="lg" className="group">
               Explore all industries
               <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Button>
-          </Link>
+          </a>
         </motion.div>
       </section>
 
@@ -999,14 +1008,14 @@ export default function LandingPage() {
               Start free — no credit card needed.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-              <Link href="/pricing">
+              <a href={APP_LOGIN_URL}>
                 <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }}>
                   <Button size="lg" variant="secondary" className="font-semibold shadow-lg">
                     Get started today <ArrowRight className="ml-1 h-4 w-4" />
                   </Button>
                 </motion.div>
-              </Link>
-              <a href="#product">
+              </a>
+              <a href={APP_LOGIN_URL}>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                   <Button size="lg" variant="ghost" className="text-white border border-white/30 hover:bg-white/10">
                     Explore platform
@@ -1049,6 +1058,7 @@ export default function LandingPage() {
               <div>
                 <p className="font-semibold mb-3">Product</p>
                 <ul className="space-y-2 text-muted-foreground">
+                  <li><a href={APP_LOGIN_URL} className="hover:text-foreground transition-colors font-medium text-primary">Login to Platform</a></li>
                   <li><Link href="/pricing" className="hover:text-foreground transition-colors">Pricing &amp; Plans</Link></li>
                   <li><a href="#product" className="hover:text-foreground transition-colors">Global Discovery</a></li>
                   <li><a href="#how-it-works" className="hover:text-foreground transition-colors">Pipeline Engine</a></li>
@@ -1060,7 +1070,7 @@ export default function LandingPage() {
                 <ul className="space-y-2 text-muted-foreground">
                   <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact Us</Link></li>
                   <li><a href="mailto:support@getyourclientsb2b.com" className="hover:text-foreground transition-colors">support@getyourclientsb2b.com</a></li>
-                  <li><Link href="/contact" className="hover:text-foreground transition-colors">Support &amp; Sales</Link></li>
+                  <li><a href={APP_LOGIN_URL} className="hover:text-foreground transition-colors">Customer Portal</a></li>
                 </ul>
               </div>
               <div>

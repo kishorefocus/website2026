@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
+import { APP_LOGIN_URL } from "@/lib/constants";
 
 export function MarketingFooter() {
   return (
@@ -37,6 +38,11 @@ export function MarketingFooter() {
             <div>
               <p className="font-semibold text-foreground mb-3">Product</p>
               <ul className="space-y-2 text-muted-foreground">
+                <li>
+                  <a href={APP_LOGIN_URL} className="hover:text-foreground transition-colors font-medium text-primary">
+                    Login to Platform
+                  </a>
+                </li>
                 <li>
                   <Link href="/pricing" className="hover:text-foreground transition-colors">
                     Pricing & Plans
@@ -77,6 +83,11 @@ export function MarketingFooter() {
                   <Link href="/contact" className="hover:text-foreground transition-colors">
                     Support & Help Desk
                   </Link>
+                </li>
+                <li>
+                  <a href={APP_LOGIN_URL} className="hover:text-foreground transition-colors">
+                    Customer Portal
+                  </a>
                 </li>
               </ul>
             </div>

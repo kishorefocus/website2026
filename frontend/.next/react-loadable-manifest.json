@@ -1,9 +1,11 @@
 {
   "app\\page.tsx -> @/components/marketing/interactive-map": {
-    "id": "app\\page.tsx -> @/components/marketing/interactive-map",
+    "id": 4194,
     "files": [
-      "static/css/_app-pages-browser_components_marketing_interactive-map_tsx.css",
-      "static/chunks/_app-pages-browser_components_marketing_interactive-map_tsx.js"
+      "static/css/fc1c9daac70c093b.css",
+      "static/chunks/d0deef33.bd75b11a952a2d3d.js",
+      "static/chunks/897.712a205638738f20.js",
+      "static/chunks/194.5abd3bf1e238de90.js"
     ]
   }
 }
