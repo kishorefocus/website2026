@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { APP_LOGIN_URL } from "@/lib/constants";
+import { APP_LOGIN_URL, SUPPORT_EMAIL, SALES_EMAIL } from "@/lib/constants";
 import {
   motion,
   useScroll,
@@ -1067,9 +1067,10 @@ export function HomePageClient() {
               </div>
               <div>
                 <p className="font-semibold mb-3">Company</p>
-                <ul className="space-y-2 text-muted-foreground">
-                  <li><Link href="/contact" className="hover:text-foreground transition-colors">Contact Us</Link></li>
-                  <li><a href="mailto:support@getyourclientsb2b.com" className="hover:text-foreground transition-colors">support@getyourclientsb2b.com</a></li>
+                <ul className="space-y-2 text-muted-foreground text-xs">
+                  <li><Link href="/contact" className="hover:text-foreground transition-colors font-medium text-foreground">Contact Channels</Link></li>
+                  <li><a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-foreground transition-colors font-mono">Support: {SUPPORT_EMAIL}</a></li>
+                  <li><a href={`mailto:${SALES_EMAIL}`} className="hover:text-foreground transition-colors font-mono">Sales: {SALES_EMAIL}</a></li>
                   <li><a href={APP_LOGIN_URL} className="hover:text-foreground transition-colors">Customer Portal</a></li>
                 </ul>
               </div>

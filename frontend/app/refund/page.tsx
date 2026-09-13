@@ -3,7 +3,7 @@ import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
 import { ShieldCheck, RefreshCw, XCircle, Mail } from "lucide-react";
-import { APP_LOGIN_URL } from "@/lib/constants";
+import { APP_LOGIN_URL, SUPPORT_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy — GetYourClients",
@@ -122,7 +122,12 @@ export default function RefundPolicyPage() {
               <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-2">
                 <div className="flex items-center gap-2 font-semibold text-foreground">
                   <Mail className="h-4 w-4 text-primary" />
-                  <span>Email: support@getyourclientsb2b.com</span>
+                  <span>
+                    Email:{" "}
+                    <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">
+                      {SUPPORT_EMAIL}
+                    </a>
+                  </span>
                 </div>
                 <p>Please include the following information:</p>
                 <ul className="list-disc pl-5 space-y-1">
@@ -148,9 +153,10 @@ export default function RefundPolicyPage() {
 
             <section className="space-y-3">
               <h2 className="font-display text-lg font-bold text-foreground">6. Contact Information</h2>
-              <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-1">
-                <p><strong>GetYourClients, Inc. - Customer Support</strong></p>
-                <p>Email: <a href="mailto:support@getyourclientsb2b.com" className="text-primary underline">support@getyourclientsb2b.com</a></p>
+              <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-1.5">
+                <p><strong>GetYourClients, Inc. - Customer Support &amp; Billing</strong></p>
+                <p>Support &amp; Refunds: <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">{SUPPORT_EMAIL}</a></p>
+                <p>Escalations &amp; Legal: <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">{ADMIN_EMAIL}</a></p>
                 <p>Support URL: <Link href="/contact" className="text-primary underline">https://getyourclientsb2b.com/contact</Link></p>
               </div>
             </section>

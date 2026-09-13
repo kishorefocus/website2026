@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ShieldCheck } from "lucide-react";
-import { APP_LOGIN_URL } from "@/lib/constants";
+import { APP_LOGIN_URL, SUPPORT_EMAIL, SALES_EMAIL, FOUNDER_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
 
 export function MarketingFooter() {
   return (
@@ -135,23 +135,33 @@ export function MarketingFooter() {
 
             <div>
               <p className="font-semibold text-foreground mb-3">Company &amp; Support</p>
-              <ul className="space-y-2 text-muted-foreground">
+              <ul className="space-y-2 text-muted-foreground text-xs">
                 <li>
-                  <Link href="/contact" className="hover:text-foreground transition-colors">
-                    Contact Us
+                  <Link href="/contact" className="hover:text-foreground transition-colors font-medium text-foreground">
+                    Contact Channels
                   </Link>
                 </li>
                 <li>
-                  <a href="mailto:support@getyourclientsb2b.com" className="hover:text-foreground transition-colors">
-                    support@getyourclientsb2b.com
+                  <a href={`mailto:${SUPPORT_EMAIL}`} className="hover:text-foreground transition-colors flex items-center gap-1.5 font-mono">
+                    <span className="text-[10px] uppercase font-bold text-primary bg-primary/10 px-1 py-0.2 rounded">Support</span> {SUPPORT_EMAIL}
                   </a>
                 </li>
                 <li>
-                  <Link href="/contact" className="hover:text-foreground transition-colors">
-                    Support &amp; Help Desk
-                  </Link>
+                  <a href={`mailto:${SALES_EMAIL}`} className="hover:text-foreground transition-colors flex items-center gap-1.5 font-mono">
+                    <span className="text-[10px] uppercase font-bold text-accent bg-accent/10 px-1 py-0.2 rounded">Sales</span> {SALES_EMAIL}
+                  </a>
                 </li>
                 <li>
+                  <a href={`mailto:${FOUNDER_EMAIL}`} className="hover:text-foreground transition-colors flex items-center gap-1.5 font-mono">
+                    <span className="text-[10px] uppercase font-bold text-purple-600 bg-purple-500/10 px-1 py-0.2 rounded">Founder</span> {FOUNDER_EMAIL}
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${ADMIN_EMAIL}`} className="hover:text-foreground transition-colors flex items-center gap-1.5 font-mono">
+                    <span className="text-[10px] uppercase font-bold text-amber-600 bg-amber-500/10 px-1 py-0.2 rounded">Admin</span> {ADMIN_EMAIL}
+                  </a>
+                </li>
+                <li className="pt-1">
                   <a href={APP_LOGIN_URL} className="hover:text-foreground transition-colors">
                     Customer Portal
                   </a>

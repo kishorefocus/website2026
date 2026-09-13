@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
+import { ADMIN_EMAIL, SUPPORT_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — GetYourClients",
@@ -120,13 +121,13 @@ export default function PrivacyPage() {
                 <li><strong>Right to Data Portability:</strong> Obtain your data in a structured, machine-readable format.</li>
               </ul>
               <p className="mt-2">
-                To exercise any of these rights, please email us at{" "}
-                <a href="mailto:privacy@getyourclientsb2b.com" className="text-primary underline">
-                  privacy@getyourclientsb2b.com
+                To exercise any of these rights, please email our administrative and data operations desk at{" "}
+                <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">
+                  {ADMIN_EMAIL}
                 </a>{" "}
-                or{" "}
-                <a href="mailto:support@getyourclientsb2b.com" className="text-primary underline">
-                  support@getyourclientsb2b.com
+                or customer support at{" "}
+                <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">
+                  {SUPPORT_EMAIL}
                 </a>.
               </p>
             </section>
@@ -141,12 +142,12 @@ export default function PrivacyPage() {
             <section className="space-y-3">
               <h2 className="font-display text-lg font-bold text-foreground">7. Contact the Data Protection Team</h2>
               <p>
-                If you have questions, feedback, or requests regarding this Privacy Policy, please reach out to us:
+                If you have questions, feedback, or requests regarding this Privacy Policy, please reach out to our team:
               </p>
-              <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-1">
-                <p><strong>GetYourClients, Inc. - Privacy Operations</strong></p>
-                <p>Email: <a href="mailto:privacy@getyourclientsb2b.com" className="text-primary underline">privacy@getyourclientsb2b.com</a></p>
-                <p>Support: <a href="mailto:support@getyourclientsb2b.com" className="text-primary underline">support@getyourclientsb2b.com</a></p>
+              <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-1.5">
+                <p><strong>GetYourClients, Inc. - Privacy &amp; Data Operations</strong></p>
+                <p>Administration: <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">{ADMIN_EMAIL}</a></p>
+                <p>Support Desk: <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">{SUPPORT_EMAIL}</a></p>
                 <p>Website: <Link href="/" className="text-primary underline">https://getyourclientsb2b.com</Link></p>
               </div>
             </section>

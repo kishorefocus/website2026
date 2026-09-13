@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
+import { SUPPORT_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Terms of Service — GetYourClients",
@@ -142,9 +143,10 @@ export default function TermsPage() {
               <p>
                 If you have questions regarding these Terms of Service, please contact us:
               </p>
-              <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-1">
+              <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-1.5">
                 <p><strong>GetYourClients, Inc.</strong></p>
-                <p>Email: <a href="mailto:support@getyourclientsb2b.com" className="text-primary underline">support@getyourclientsb2b.com</a></p>
+                <p>Support Desk: <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">{SUPPORT_EMAIL}</a></p>
+                <p>Legal &amp; Administration: <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">{ADMIN_EMAIL}</a></p>
                 <p>Website: <Link href="/" className="text-primary underline">https://getyourclientsb2b.com</Link></p>
               </div>
             </section>

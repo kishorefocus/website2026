@@ -1,3 +1,5 @@
+import { SUPPORT_EMAIL, SALES_EMAIL, FOUNDER_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
+
 /**
  * Reusable JSON-LD structured data component for Schema.org markup.
  * Drop this into any page to inject <script type="application/ld+json"> tags.
@@ -28,12 +30,32 @@ export function organizationSchema() {
     logo: "https://getyourclientsb2b.com/images/logo_image.png",
     description:
       "B2B client discovery platform for sales teams — search leads by industry and country, work them on a map, and run outreach from one dashboard.",
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "support@getyourclientsb2b.com",
-      contactType: "customer support",
-      availableLanguage: "English",
-    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        email: SUPPORT_EMAIL,
+        contactType: "customer support",
+        availableLanguage: "English",
+      },
+      {
+        "@type": "ContactPoint",
+        email: SALES_EMAIL,
+        contactType: "sales",
+        availableLanguage: "English",
+      },
+      {
+        "@type": "ContactPoint",
+        email: FOUNDER_EMAIL,
+        contactType: "executive",
+        availableLanguage: "English",
+      },
+      {
+        "@type": "ContactPoint",
+        email: ADMIN_EMAIL,
+        contactType: "administrative",
+        availableLanguage: "English",
+      },
+    ],
     sameAs: [],
   };
 }
