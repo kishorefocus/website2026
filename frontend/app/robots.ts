@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/onboard/", "/success/", "/cancel/"],
+        disallow: ["/api/", "/onboard/", "/success/", "/cancel/", "/_next/"],
       },
     ],
     sitemap: "https://getyourclientsb2b.com/sitemap.xml",
