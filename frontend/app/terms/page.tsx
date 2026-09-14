@@ -3,18 +3,63 @@ import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
 import { SUPPORT_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
+import { JsonLd, webPageSchema } from "@/components/seo/JsonLd";
+
+const BASE_URL = "https://getyourclientsb2b.com";
 
 export const metadata: Metadata = {
-  title: "Terms of Service — GetYourClients",
-  description: "Review the GetYourClients Terms of Service governing platform usage, subscriptions, billing, and compliance.",
+  title: "Terms of Service — GetYourClientsB2B",
+  description:
+    "Review the GetYourClientsB2B Terms of Service governing platform usage, subscriptions, billing, and compliance.",
+  alternates: {
+    canonical: `${BASE_URL}/terms`,
+  },
+  openGraph: {
+    title: "Terms of Service — GetYourClientsB2B",
+    description:
+      "Review the GetYourClientsB2B Terms of Service governing platform usage, subscriptions, billing, and compliance.",
+    url: `${BASE_URL}/terms`,
+    siteName: "GetYourClientsB2B",
+    type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — Terms of Service",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Terms of Service — GetYourClientsB2B",
+    description:
+      "Review the GetYourClientsB2B Terms of Service governing platform usage, subscriptions, billing, and compliance.",
+    images: [`${BASE_URL}/images/og-image.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {
   const lastUpdated = "September 10, 2026";
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <MarketingNavbar />
+    <>
+      <JsonLd data={webPageSchema({
+        name: "Terms of Service — GetYourClientsB2B",
+        url: `${BASE_URL}/terms`,
+        description: "Review the GetYourClientsB2B Terms of Service governing platform usage, subscriptions, billing, and compliance.",
+        breadcrumb: [
+          { name: "Home", url: BASE_URL },
+          { name: "Terms of Service", url: `${BASE_URL}/terms` },
+        ],
+      })} />
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+        <MarketingNavbar />
 
       <main className="flex-1 py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
@@ -156,5 +201,6 @@ export default function TermsPage() {
 
       <MarketingFooter />
     </div>
+    </>
   );
 }

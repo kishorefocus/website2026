@@ -4,18 +4,63 @@ import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
 import { ShieldCheck, RefreshCw, XCircle, Mail } from "lucide-react";
 import { APP_LOGIN_URL, SUPPORT_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
+import { JsonLd, webPageSchema } from "@/components/seo/JsonLd";
+
+const BASE_URL = "https://getyourclientsb2b.com";
 
 export const metadata: Metadata = {
-  title: "Refund & Cancellation Policy — GetYourClients",
-  description: "Understand the GetYourClients 14-day refund guarantee, cancellation procedures, and Paddle billing policies.",
+  title: "Refund & Cancellation Policy — GetYourClientsB2B",
+  description:
+    "Understand the GetYourClientsB2B 14-day refund guarantee, cancellation procedures, and Paddle billing policies.",
+  alternates: {
+    canonical: `${BASE_URL}/refund`,
+  },
+  openGraph: {
+    title: "Refund & Cancellation Policy — GetYourClientsB2B",
+    description:
+      "GetYourClientsB2B offers a 14-day money-back guarantee. Learn about our refund process, cancellation steps, and Paddle billing policies.",
+    url: `${BASE_URL}/refund`,
+    siteName: "GetYourClientsB2B",
+    type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — Refund & Cancellation Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Refund & Cancellation Policy — GetYourClientsB2B",
+    description:
+      "14-day money-back guarantee. Learn about GetYourClientsB2B refunds, cancellation, and Paddle billing.",
+    images: [`${BASE_URL}/images/og-image.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RefundPolicyPage() {
   const lastUpdated = "September 10, 2026";
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <MarketingNavbar />
+    <>
+      <JsonLd data={webPageSchema({
+        name: "Refund & Cancellation Policy — GetYourClientsB2B",
+        url: `${BASE_URL}/refund`,
+        description: "Understand the GetYourClientsB2B 14-day refund guarantee, cancellation procedures, and Paddle billing policies.",
+        breadcrumb: [
+          { name: "Home", url: BASE_URL },
+          { name: "Refund Policy", url: `${BASE_URL}/refund` },
+        ],
+      })} />
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+        <MarketingNavbar />
 
       <main className="flex-1 py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
@@ -166,5 +211,6 @@ export default function RefundPolicyPage() {
 
       <MarketingFooter />
     </div>
+    </>
   );
 }

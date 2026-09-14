@@ -3,18 +3,63 @@ import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import Link from "next/link";
 import { ADMIN_EMAIL, SUPPORT_EMAIL } from "@/lib/constants";
+import { JsonLd, webPageSchema } from "@/components/seo/JsonLd";
+
+const BASE_URL = "https://getyourclientsb2b.com";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — GetYourClients",
-  description: "Read the GetYourClients Privacy Policy. Learn how we collect, handle, and safeguard your data under GDPR & CCPA.",
+  title: "Privacy Policy — GetYourClientsB2B",
+  description:
+    "Read the GetYourClientsB2B Privacy Policy. Learn how we collect, handle, and protect your data in compliance with GDPR & CCPA.",
+  alternates: {
+    canonical: `${BASE_URL}/privacy`,
+  },
+  openGraph: {
+    title: "Privacy Policy — GetYourClientsB2B",
+    description:
+      "Read our Privacy Policy. Learn how GetYourClientsB2B collects, handles, and protects your data in compliance with GDPR & CCPA.",
+    url: `${BASE_URL}/privacy`,
+    siteName: "GetYourClientsB2B",
+    type: "website",
+    images: [
+      {
+        url: `${BASE_URL}/images/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — Privacy Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Privacy Policy — GetYourClientsB2B",
+    description:
+      "Read our Privacy Policy. GDPR & CCPA compliant data practices for GetYourClientsB2B users.",
+    images: [`${BASE_URL}/images/og-image.png`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {
   const lastUpdated = "September 10, 2026";
 
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <MarketingNavbar />
+    <>
+      <JsonLd data={webPageSchema({
+        name: "Privacy Policy — GetYourClientsB2B",
+        url: `${BASE_URL}/privacy`,
+        description: "Read the GetYourClientsB2B Privacy Policy. Learn how we collect, handle, and protect your data in compliance with GDPR & CCPA.",
+        breadcrumb: [
+          { name: "Home", url: BASE_URL },
+          { name: "Privacy Policy", url: `${BASE_URL}/privacy` },
+        ],
+      })} />
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+        <MarketingNavbar />
 
       <main className="flex-1 py-14 md:py-20">
         <div className="mx-auto max-w-4xl px-6">
@@ -157,5 +202,6 @@ export default function PrivacyPage() {
 
       <MarketingFooter />
     </div>
+    </>
   );
 }

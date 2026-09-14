@@ -48,6 +48,8 @@ export const metadata: Metadata = {
   authors: [{ name: "GetYourClientsB2B", url: BASE_URL }],
   creator: "GetYourClientsB2B",
   publisher: "GetYourClientsB2B",
+  category: "technology",
+  classification: "Business Software, B2B Lead Generation, CRM",
   robots: {
     index: true,
     follow: true,
@@ -69,7 +71,7 @@ export const metadata: Metadata = {
       "Find, qualify, and close B2B clients across 190+ countries. Map-based lead discovery, industry filters, and cold outreach CRM — all in one platform.",
     images: [
       {
-        url: "/images/og-image.png",
+        url: `${BASE_URL}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — B2B Client Discovery Platform",
@@ -78,10 +80,12 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    creator: "@GetYourClientsB2B",
     title: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
     description:
       "Find, qualify, and close B2B clients across 190+ countries. Map-based lead discovery, industry filters, and cold outreach CRM — all in one platform.",
-    images: ["/images/og-image.png"],
+    images: [`${BASE_URL}/images/og-image.png`],
   },
   alternates: {
     canonical: BASE_URL,

@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Built-in CRM for cold email outreach. Run sequences, track replies, handle follow-ups, and manage your B2B pipeline — all in one platform.",
     url: "https://getyourclientsb2b.com/features/crm-outreach",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — Cold Outreach CRM",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Cold Outreach CRM — Run B2B Email Campaigns | GetYourClientsB2B",
+    description:
+      "Run cold email sequences, track replies, and manage B2B pipeline — all in one built-in CRM.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

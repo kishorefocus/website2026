@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { ContactPageClient } from "@/components/marketing/contact-page-client";
+import { JsonLd, contactPageSchema, breadcrumbSchema } from "@/components/seo/JsonLd";
 
 // ─── Page-level SEO metadata ──────────────────────────────────────────────────
 // Server component wrapper — owns metadata.
@@ -47,5 +48,14 @@ export const metadata: Metadata = {
 
 // ─── Server component ─────────────────────────────────────────────────────────
 export default function ContactPage() {
-  return <ContactPageClient />;
+  return (
+    <>
+      <JsonLd data={contactPageSchema()} />
+      <JsonLd data={breadcrumbSchema([
+        { name: "Home", url: "https://getyourclientsb2b.com" },
+        { name: "Contact", url: "https://getyourclientsb2b.com/contact" },
+      ])} />
+      <ContactPageClient />
+    </>
+  );
 }

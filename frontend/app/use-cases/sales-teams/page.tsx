@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Equip your sales team with a B2B prospecting tool that finds leads, runs outreach, and manages pipeline — all in one platform. Save 4+ hours per rep per day.",
     url: "https://getyourclientsb2b.com/use-cases/sales-teams",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — B2B Prospecting Tool for Sales Teams",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "B2B Prospecting Tool for Sales Teams | GetYourClientsB2B",
+    description:
+      "Find leads, run outreach, and manage pipeline — all in one platform. Sales teams save 4+ hours per rep per day.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

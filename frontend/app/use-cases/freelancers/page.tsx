@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Find your next B2B client by industry and country, send personalized cold emails, and manage your project pipeline — from one affordable freelancer-friendly tool.",
     url: "https://getyourclientsb2b.com/use-cases/freelancers",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — B2B Client Finder for Freelancers",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "B2B Client Finder for Freelancers | GetYourClientsB2B",
+    description:
+      "Find B2B clients by industry and country. Send personalized cold emails and land projects — without cold calling.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

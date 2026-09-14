@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Visually search for B2B leads on a live map. Filter by industry, country, or city — see lead density, plan territories, and start outreach immediately.",
     url: "https://getyourclientsb2b.com/features/map-search",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — Map-Based B2B Lead Prospecting",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Find B2B Leads by Location — Map-Based Prospecting | GetYourClientsB2B",
+    description:
+      "Search B2B leads on a live map. Visualize lead density, plan territories, and start outreach immediately.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

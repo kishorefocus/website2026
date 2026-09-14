@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Don't pay $15K+/year for ZoomInfo. GetYourClientsB2B gives startups and small teams enterprise-grade B2B discovery at a fraction of the cost.",
     url: "https://getyourclientsb2b.com/compare/zoominfo-alternative",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B vs ZoomInfo — Startup-Friendly B2B Data Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "ZoomInfo Alternative for Startups | GetYourClientsB2B",
+    description:
+      "Enterprise B2B lead discovery without the $15K ZoomInfo price tag. Map-based prospecting + cold outreach CRM.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Search and discover B2B leads across 190+ countries by industry, company size, and geography. Export verified contacts and run outreach — all in one platform.",
     url: "https://getyourclientsb2b.com/features/lead-discovery",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — B2B Lead Finder Tool",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "B2B Lead Finder Tool — Find Leads by Industry & Country | GetYourClientsB2B",
+    description:
+      "Search millions of B2B businesses by industry and country across 190+ countries. Free to try.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Discover and close clients across any industry and country. GetYourClientsB2B powers B2B agencies with scalable prospecting, multi-client pipelines, and outreach automation.",
     url: "https://getyourclientsb2b.com/use-cases/agencies",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — B2B Lead Generation for Agencies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "B2B Lead Generation for Agencies | GetYourClientsB2B",
+    description:
+      "Scalable B2B client discovery for agencies. Multi-client pipelines, flat-rate pricing, and outreach automation across 190+ countries.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

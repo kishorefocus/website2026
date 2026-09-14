@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "GetYourClientsB2B vs Hunter.io — more than just email finding. Built-in CRM, outreach sequences, and map-based prospecting.",
     url: "https://getyourclientsb2b.com/compare/hunter-alternative",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B vs Hunter.io — B2B Email & Outreach Comparison",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Hunter.io Alternative — B2B Leads & Outreach CRM | GetYourClientsB2B",
+    description:
+      "More than just email finding. Map-based B2B prospecting + built-in cold outreach CRM. Better than Hunter.io.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

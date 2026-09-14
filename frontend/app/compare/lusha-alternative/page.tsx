@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Compare GetYourClientsB2B vs Lusha. Map-based prospecting, built-in CRM, and 190+ country coverage vs Lusha's contact enrichment.",
     url: "https://getyourclientsb2b.com/compare/lusha-alternative",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B vs Lusha — B2B Data & Outreach Comparison",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Lusha Alternative — B2B Lead Discovery & Outreach CRM | GetYourClientsB2B",
+    description:
+      "Map-based B2B lead discovery + built-in outreach CRM. Better coverage than Lusha, with flat-rate pricing.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

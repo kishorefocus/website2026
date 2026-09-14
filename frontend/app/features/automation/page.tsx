@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "Automate your entire B2B outreach workflow — sequences, follow-ups, reply handling, and pipeline updates. Let the system work while your team closes.",
     url: "https://getyourclientsb2b.com/features/automation",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B — Sales Outreach Automation",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Sales Outreach Automation — Automate Cold Email | GetYourClientsB2B",
+    description:
+      "Automate cold email sequences, follow-ups, reply detection, and pipeline updates — all in one B2B platform.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 

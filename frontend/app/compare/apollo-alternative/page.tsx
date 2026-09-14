@@ -26,7 +26,24 @@ export const metadata: Metadata = {
     description:
       "GetYourClientsB2B vs Apollo.io — side-by-side feature & pricing comparison. Map-based B2B prospecting at a fraction of Apollo's cost.",
     url: "https://getyourclientsb2b.com/compare/apollo-alternative",
+    siteName: "GetYourClientsB2B",
     type: "website",
+    images: [
+      {
+        url: "https://getyourclientsb2b.com/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "GetYourClientsB2B vs Apollo.io — B2B Lead Generation Comparison",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@GetYourClientsB2B",
+    title: "Best Apollo.io Alternative in 2026 | GetYourClientsB2B",
+    description:
+      "Map-based B2B lead discovery + cold outreach CRM. A better Apollo.io alternative with flat-rate pricing.",
+    images: ["https://getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
