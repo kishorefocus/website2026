@@ -10,6 +10,7 @@ import {
   Shield, Zap, TrendingUp, Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { cn } from "@/lib/utils";
 import { APP_LOGIN_URL, SUPPORT_EMAIL, SALES_EMAIL } from "@/lib/constants";
 import {
@@ -422,6 +423,7 @@ export function HomePageClient() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Link href="/contact" className="hidden sm:inline-flex">
             <Button variant="ghost" size="sm" className="font-medium hover:bg-muted/80">
               Contact Sales

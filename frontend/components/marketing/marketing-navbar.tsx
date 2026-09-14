@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { APP_LOGIN_URL } from "@/lib/constants";
@@ -63,6 +64,7 @@ export function MarketingNavbar() {
         </nav>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <Link href="/contact" className="hidden sm:inline-flex">
             <Button variant="ghost" size="sm" className="font-medium hover:bg-muted/80">
               Contact Sales
