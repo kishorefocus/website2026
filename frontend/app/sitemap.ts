@@ -18,6 +18,16 @@ const FEATURES_SLUGS = [
 
 const USE_CASE_SLUGS = ["agencies", "sales-teams", "freelancers"];
 
+const INDUSTRY_SLUGS = [
+  "saas",
+  "manufacturing",
+  "healthcare",
+  "retail",
+  "finance",
+  "ecommerce",
+  "real-estate",
+];
+
 // Programmatic geo+industry pages (seed set)
 const FIND_SLUGS = [
   "saas-clients-in-dubai",
@@ -93,8 +103,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  // NOTE: /industries/* routes removed — no route handlers exist for those slugs.
-  // Add them back only when the actual Next.js app/industries/[slug]/page.tsx is created.
+  const industryRoutes: MetadataRoute.Sitemap = INDUSTRY_SLUGS.map((slug) => ({
+    url: `${BASE_URL}/industries/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.75,
+  }));
 
   const findRoutes: MetadataRoute.Sitemap = FIND_SLUGS.map((slug) => ({
     url: `${BASE_URL}/find/${slug}`,
@@ -108,6 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...compareRoutes,
     ...featuresRoutes,
     ...useCaseRoutes,
+    ...industryRoutes,
     ...findRoutes,
   ];
 }
