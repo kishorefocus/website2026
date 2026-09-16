@@ -28,7 +28,6 @@ const INDUSTRY_SLUGS = [
   "real-estate",
 ];
 
-// Programmatic geo+industry pages (seed set)
 const FIND_SLUGS = [
   "saas-clients-in-dubai",
   "saas-clients-in-london",
@@ -40,6 +39,12 @@ const FIND_SLUGS = [
   "finance-clients-in-singapore",
   "retail-clients-in-india",
   "saas-clients-in-paris",
+];
+
+const BLOG_SLUGS = [
+  "hunter-alternatives",
+  "b2b-client-outreach",
+  "find-b2b-clients",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -61,6 +66,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
+    },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     {
       url: `${BASE_URL}/privacy`,
@@ -86,14 +97,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE_URL}/compare/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.85,
+    priority: 0.9,
   }));
 
   const featuresRoutes: MetadataRoute.Sitemap = FEATURES_SLUGS.map((slug) => ({
     url: `${BASE_URL}/features/${slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.8,
+    priority: 0.85,
   }));
 
   const useCaseRoutes: MetadataRoute.Sitemap = USE_CASE_SLUGS.map((slug) => ({
@@ -117,6 +128,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  const blogRoutes: MetadataRoute.Sitemap = BLOG_SLUGS.map((slug) => ({
+    url: `${BASE_URL}/blog/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.85,
+  }));
+
   return [
     ...staticRoutes,
     ...compareRoutes,
@@ -124,5 +142,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...useCaseRoutes,
     ...industryRoutes,
     ...findRoutes,
+    ...blogRoutes,
   ];
 }

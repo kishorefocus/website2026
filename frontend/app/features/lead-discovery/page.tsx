@@ -8,15 +8,20 @@ import { JsonLd, breadcrumbSchema, softwareAppSchema, faqSchema } from "@/compon
 import { APP_LOGIN_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "B2B Lead Finder Tool — Discover Leads by Industry & Country",
+  title: "Find B2B Clients by Industry & Country — B2B Lead Discovery Tool",
   description:
-    "GetYourClientsB2B's B2B lead finder lets you search millions of businesses by industry, country, and company size. Export verified contacts and start outreach — free to try.",
+    "Find B2B clients in any industry across 190+ countries. GetYourClientsB2B's lead discovery lets you filter by industry, country, and company size — then add leads directly to outreach sequences. Free to try.",
   keywords: [
+    "find b2b clients",
+    "b2b client finder",
+    "find b2b clients online",
+    "b2b client discovery tool",
     "B2B lead finder tool",
     "find B2B leads by industry",
-    "B2B client discovery tool",
     "B2B lead generation software",
     "B2B prospecting platform",
+    "find b2b clients by industry",
+    "b2b lead discovery",
   ],
   alternates: {
     canonical: "https://getyourclientsb2b.com/features/lead-discovery",

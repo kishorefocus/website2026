@@ -9,11 +9,15 @@ import { HomePageClient } from "@/components/marketing/home-page-client";
 const BASE_URL = "https://getyourclientsb2b.com";
 
 export const metadata: Metadata = {
-  title: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+  title: "Find B2B Clients Online — B2B Client Discovery & Cold Outreach CRM",
   description:
-    "Find B2B leads by industry and country across 190+ countries. Map-based prospecting, cold outreach CRM, and pipeline management — all in one platform. Start free today.",
+    "The fastest way to find B2B clients online. Search leads by industry & country across 190+ countries, visualize them on an interactive map, and run cold outreach from one dashboard. Start free — no credit card required.",
   keywords: [
-    "B2B client discovery tool",
+    "find b2b clients",
+    "b2b client",
+    "b2b client discovery tool",
+    "find b2b clients online",
+    "b2b client finder",
     "B2B lead generation software",
     "cold outreach CRM",
     "find B2B leads by industry",
@@ -21,13 +25,12 @@ export const metadata: Metadata = {
     "sales outreach automation software",
     "CRM for cold email outreach",
     "B2B lead finder tool",
-    "find B2B clients online",
   ],
   alternates: {
     canonical: BASE_URL,
   },
   openGraph: {
-    title: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+    title: "Find B2B Clients Online — B2B Client Discovery & Cold Outreach CRM",
     description:
       "Find, qualify, and close B2B clients across 190+ countries. Map-based lead discovery, industry filters, and cold outreach CRM — all in one platform.",
     url: BASE_URL,
@@ -38,13 +41,13 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/images/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+        alt: "GetYourClientsB2B — Find B2B Clients Online",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "GetYourClientsB2B — B2B Client Discovery & Cold Outreach CRM",
+    title: "Find B2B Clients Online — B2B Client Discovery & Cold Outreach CRM",
     description:
       "Find, qualify, and close B2B clients across 190+ countries. Map-based lead discovery, industry filters, and cold outreach CRM.",
     images: [`${BASE_URL}/images/og-image.png`],
