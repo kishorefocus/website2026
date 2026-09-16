@@ -17,6 +17,7 @@ export function MarketingNavbar() {
     { label: "Features", href: "/features/lead-discovery" },
     { label: "Compare", href: "/compare/apollo-alternative" },
     { label: "Pricing", href: "/pricing" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 

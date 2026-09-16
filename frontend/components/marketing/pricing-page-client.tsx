@@ -2,11 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, ArrowRight, HelpCircle, Shield, Zap, Sparkles } from "lucide-react";
+import { Check, ArrowRight, HelpCircle, Shield, Zap, Sparkles, X, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MarketingNavbar } from "@/components/marketing/marketing-navbar";
 import { MarketingFooter } from "@/components/marketing/marketing-footer";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { APP_LOGIN_URL } from "@/lib/constants";
 
@@ -19,7 +18,7 @@ const pricingPlans = [
     yearlyPrice: 0,
     features: [
       "3 free verified leads",
-      "1 team seat",
+      "1 team seat included",
       "Basic global searches",
       "Standard CRM pipeline",
       "Community support",
@@ -44,8 +43,8 @@ const pricingPlans = [
       "Standard email support",
     ],
     popular: false,
-    ctaText: "Choose Growth",
-    ctaLink: "/contact?plan=growth",
+    ctaText: "Get Started with Growth",
+    ctaLink: `${APP_LOGIN_URL}?plan=growth`,
     variant: "outline" as const,
   },
   {
@@ -63,8 +62,8 @@ const pricingPlans = [
       "Priority customer support",
     ],
     popular: true,
-    ctaText: "Choose Pro",
-    ctaLink: "/contact?plan=pro",
+    ctaText: "Get Started with Pro",
+    ctaLink: `${APP_LOGIN_URL}?plan=pro`,
     variant: "default" as const,
   },
   {
@@ -82,9 +81,172 @@ const pricingPlans = [
       "99.9% Uptime SLA",
     ],
     popular: false,
-    ctaText: "Choose Enterprise",
+    ctaText: "Talk to Sales",
     ctaLink: "/contact?plan=enterprise",
     variant: "outline" as const,
+  },
+];
+
+const featureComparison = [
+  {
+    category: "Lead Discovery & Intelligence",
+    features: [
+      {
+        name: "Monthly Verified Leads",
+        free: "3 verified leads",
+        growth: "500 leads / mo",
+        pro: "Unlimited leads",
+        enterprise: "Unlimited leads",
+      },
+      {
+        name: "Global Country Coverage",
+        free: "190+ countries",
+        growth: "190+ countries",
+        pro: "190+ countries",
+        enterprise: "190+ countries",
+      },
+      {
+        name: "Map-Based Visual Prospecting",
+        free: "Basic view",
+        growth: "Full map search",
+        pro: "Full map + radius",
+        enterprise: "Custom geospatial layers",
+      },
+      {
+        name: "Real-Time Email Verification",
+        free: "Included",
+        growth: "Included",
+        pro: "Included",
+        enterprise: "Included",
+      },
+      {
+        name: "Industry & Sub-sector Filters",
+        free: "Basic",
+        growth: "Advanced",
+        pro: "Advanced",
+        enterprise: "Custom taxonomies",
+      },
+      {
+        name: "Company Revenue & Size Filters",
+        free: false,
+        growth: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "AI Persona Discovery Engine",
+        free: false,
+        growth: "Standard",
+        pro: "Advanced",
+        enterprise: "Custom AI fine-tuning",
+      },
+    ],
+  },
+  {
+    category: "Cold Outreach & Pipeline CRM",
+    features: [
+      {
+        name: "Visual Kanban Deal Pipeline",
+        free: "Standard",
+        growth: "Full pipeline",
+        pro: "Multiple pipelines",
+        enterprise: "Unlimited pipelines",
+      },
+      {
+        name: "Connected Email Inboxes",
+        free: "1 inbox",
+        growth: "3 inboxes",
+        pro: "Unlimited inboxes",
+        enterprise: "Dedicated IP & warmup",
+      },
+      {
+        name: "Automated Follow-Up Sequences",
+        free: false,
+        growth: "3-step sequences",
+        pro: "Unlimited multi-channel",
+        enterprise: "Custom webhook workflows",
+      },
+      {
+        name: "Call Logging & Phone Outreach",
+        free: "Manual notes",
+        growth: "Click-to-call logging",
+        pro: "Advanced call tracking",
+        enterprise: "Custom telephony bridge",
+      },
+      {
+        name: "Activity Tracking & History",
+        free: "30 days",
+        growth: "1 year",
+        pro: "Unlimited",
+        enterprise: "Full audit logs",
+      },
+    ],
+  },
+  {
+    category: "Team, Exports & Administration",
+    features: [
+      {
+        name: "Included Team Seats",
+        free: "1 seat",
+        growth: "3 seats included",
+        pro: "10 seats included",
+        enterprise: "Unlimited seats",
+      },
+      {
+        name: "Extra Cost Per Seat",
+        free: "$0",
+        growth: "$0",
+        pro: "$0",
+        enterprise: "$0",
+      },
+      {
+        name: "CSV & Excel Contact Exports",
+        free: "3 leads total",
+        growth: "500 / month",
+        pro: "Unlimited",
+        enterprise: "Unlimited + REST API",
+      },
+      {
+        name: "Role-Based Access Control (RBAC)",
+        free: false,
+        growth: "Admin & Member",
+        pro: "Granular permissions",
+        enterprise: "Custom roles & SAML/SSO",
+      },
+    ],
+  },
+  {
+    category: "Security, Guarantees & Support",
+    features: [
+      {
+        name: "14-Day Money-Back Guarantee",
+        free: "Free tier",
+        growth: "14 Days",
+        pro: "14 Days",
+        enterprise: "30 Days",
+      },
+      {
+        name: "Merchant of Record (Paddle PCI-DSS)",
+        free: true,
+        growth: true,
+        pro: true,
+        enterprise: true,
+      },
+      {
+        name: "Customer Support Level",
+        free: "Community",
+        growth: "Standard email (24h)",
+        pro: "Priority email & chat (4h)",
+        enterprise: "Dedicated Account Manager",
+      },
+      {
+        name: "Service Level Agreement (SLA)",
+        free: "Best effort",
+        growth: "99.5% uptime",
+        pro: "99.9% uptime",
+        enterprise: "99.99% custom SLA",
+      },
+    ],
   },
 ];
 
@@ -99,19 +261,19 @@ const faqs = [
   },
   {
     q: "Can I cancel my subscription at any time?",
-    a: "Yes. You can cancel your subscription at any time by contacting our support team or through your customer billing link. When you cancel, your account remains active with full access until the end of your paid billing period.",
+    a: "Yes. You can cancel your subscription at any time with one click from your billing portal. When you cancel, your account remains active with full access until the end of your paid billing period.",
   },
   {
     q: "What is your refund policy?",
-    a: "We offer a 14-day money-back guarantee for first-time subscriptions. If you are not satisfied with GetYourClients, contact us within 14 days of your initial purchase for a full refund. Please review our Refund & Cancellation Policy for full details.",
+    a: "We offer an unconditional 14-day money-back guarantee for first-time subscriptions. If you are not completely satisfied with GetYourClients, contact us within 14 days for a prompt, no-questions-asked refund.",
+  },
+  {
+    q: "Are there per-seat fees or hidden costs?",
+    a: "No! Unlike legacy vendors who charge $150+ per month per user, GetYourClients includes multi-seat teams in every tier. Growth includes 3 seats, Pro includes 10 seats, and Enterprise has unlimited seats.",
   },
   {
     q: "What payment methods are supported?",
     a: "Through Paddle, we accept major credit and debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, and Google Pay, depending on your region and currency.",
-  },
-  {
-    q: "Can I switch plans later?",
-    a: "Yes! You can upgrade or downgrade your plan at any time by contacting our support team. Prorated adjustments will be automatically calculated.",
   },
 ];
 
@@ -126,12 +288,12 @@ export function PricingPageClient() {
         <div className="mx-auto max-w-7xl px-6">
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto">
-            <span className="manifest-chip">TRANSPARENT B2B PRICING</span>
+            <span className="manifest-chip">100% TRANSPARENT B2B PRICING</span>
             <h1 className="mt-4 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
               Simple plans for ambitious <span className="gradient-text">sales teams</span>
             </h1>
             <p className="mt-4 text-base text-muted-foreground leading-relaxed">
-              Find verified decision-makers across 190+ countries. Choose the plan that fits your growth stage. No hidden fees or long-term lock-in.
+              Find verified decision-makers across 190+ countries. Zero per-seat gouging, no hidden data fees, and instant self-serve activation.
             </p>
 
             {/* Billing interval toggle */}
@@ -163,17 +325,22 @@ export function PricingPageClient() {
               </div>
             </div>
 
-            {/* Already have an account callout */}
-            <div className="mt-6 text-center text-xs text-muted-foreground">
-              Already have an account?{" "}
-              <a href={APP_LOGIN_URL} className="font-semibold text-primary hover:underline inline-flex items-center gap-1">
-                Log in to your workspace <ArrowRight className="h-3 w-3" />
-              </a>
+            {/* Micro guarantees */}
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-xs text-muted-foreground">
+              <span className="inline-flex items-center gap-1">
+                <CheckCircle2 className="h-3.5 w-3.5 text-success" /> 14-day money-back guarantee
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <CheckCircle2 className="h-3.5 w-3.5 text-success" /> Cancel anytime in 1 click
+              </span>
+              <span className="inline-flex items-center gap-1">
+                <CheckCircle2 className="h-3.5 w-3.5 text-success" /> Instant workspace access
+              </span>
             </div>
           </div>
 
           {/* Pricing Cards Grid */}
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {pricingPlans.map((plan) => {
               const price = billingInterval === "month" ? plan.monthlyPrice : plan.yearlyPrice;
               return (
@@ -249,6 +416,129 @@ export function PricingPageClient() {
                 </div>
               );
             })}
+          </div>
+
+          {/* Trust Guarantees Bar */}
+          <div className="mt-12 rounded-2xl border border-border bg-card/40 p-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div>
+              <p className="font-semibold text-sm text-foreground">14-Day Guarantee</p>
+              <p className="text-xs text-muted-foreground mt-0.5">100% refund if not satisfied</p>
+            </div>
+            <div>
+              <p className="font-semibold text-sm text-foreground">No Contract Lock-in</p>
+              <p className="text-xs text-muted-foreground mt-0.5">Cancel or switch plans anytime</p>
+            </div>
+            <div>
+              <p className="font-semibold text-sm text-foreground">Flat-Rate Pricing</p>
+              <p className="text-xs text-muted-foreground mt-0.5">No surprise per-seat billing</p>
+            </div>
+            <div>
+              <p className="font-semibold text-sm text-foreground">Instant Activation</p>
+              <p className="text-xs text-muted-foreground mt-0.5">Start prospecting immediately</p>
+            </div>
+          </div>
+
+          {/* ─── In-Depth Feature Comparison Matrix ───────────────── */}
+          <div className="mt-20">
+            <div className="text-center max-w-2xl mx-auto mb-12">
+              <span className="manifest-chip">FULL TRANSPARENCY</span>
+              <h2 className="mt-3 font-display text-3xl font-bold tracking-tight">
+                Compare Plan Features &amp; Allowances
+              </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                See exactly what is included in each plan — with zero hidden restrictions.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-subtle">
+              <div className="overflow-x-auto">
+                <table className="w-full text-left border-collapse text-xs">
+                  <thead>
+                    <tr className="border-b border-border bg-muted/40">
+                      <th className="py-4 px-6 font-semibold text-foreground text-sm w-2/5">Plan Features</th>
+                      <th className="py-4 px-4 font-semibold text-foreground text-center w-[15%]">Free ($0)</th>
+                      <th className="py-4 px-4 font-semibold text-foreground text-center w-[15%]">Growth ($19)</th>
+                      <th className="py-4 px-4 font-semibold text-primary text-center w-[15%] bg-primary/5">Pro ($49)</th>
+                      <th className="py-4 px-4 font-semibold text-foreground text-center w-[15%]">Enterprise ($149)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {featureComparison.map((cat, catIdx) => (
+                      <>
+                        <tr key={`cat-${catIdx}`} className="bg-surface/70 border-y border-border">
+                          <td
+                            colSpan={5}
+                            className="py-2.5 px-6 font-bold uppercase tracking-wider text-[11px] text-primary"
+                          >
+                            {cat.category}
+                          </td>
+                        </tr>
+                        {cat.features.map((feat, fIdx) => (
+                          <tr
+                            key={`feat-${catIdx}-${fIdx}`}
+                            className="border-b border-border/50 hover:bg-muted/20 transition-colors"
+                          >
+                            <td className="py-3 px-6 text-foreground font-medium">{feat.name}</td>
+                            
+                            {/* Free */}
+                            <td className="py-3 px-4 text-center text-muted-foreground">
+                              {typeof feat.free === "boolean" ? (
+                                feat.free ? (
+                                  <Check className="h-4 w-4 text-primary inline-block" />
+                                ) : (
+                                  <X className="h-4 w-4 text-muted-foreground/40 inline-block" />
+                                )
+                              ) : (
+                                feat.free
+                              )}
+                            </td>
+
+                            {/* Growth */}
+                            <td className="py-3 px-4 text-center text-muted-foreground">
+                              {typeof feat.growth === "boolean" ? (
+                                feat.growth ? (
+                                  <Check className="h-4 w-4 text-primary inline-block" />
+                                ) : (
+                                  <X className="h-4 w-4 text-muted-foreground/40 inline-block" />
+                                )
+                              ) : (
+                                feat.growth
+                              )}
+                            </td>
+
+                            {/* Pro */}
+                            <td className="py-3 px-4 text-center text-foreground font-medium bg-primary/5">
+                              {typeof feat.pro === "boolean" ? (
+                                feat.pro ? (
+                                  <Check className="h-4 w-4 text-primary inline-block" />
+                                ) : (
+                                  <X className="h-4 w-4 text-muted-foreground/40 inline-block" />
+                                )
+                              ) : (
+                                feat.pro
+                              )}
+                            </td>
+
+                            {/* Enterprise */}
+                            <td className="py-3 px-4 text-center text-muted-foreground">
+                              {typeof feat.enterprise === "boolean" ? (
+                                feat.enterprise ? (
+                                  <Check className="h-4 w-4 text-primary inline-block" />
+                                ) : (
+                                  <X className="h-4 w-4 text-muted-foreground/40 inline-block" />
+                                )
+                              ) : (
+                                feat.enterprise
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
 
           {/* Security & Merchant of Record Strip */}

@@ -137,7 +137,12 @@ export function MarketingFooter() {
               <p className="font-semibold text-foreground mb-3">Company &amp; Support</p>
               <ul className="space-y-2 text-muted-foreground text-xs">
                 <li>
-                  <Link href="/contact" className="hover:text-foreground transition-colors font-medium text-foreground">
+                  <Link href="/about" className="hover:text-foreground transition-colors font-medium text-foreground">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-foreground transition-colors">
                     Contact Channels
                   </Link>
                 </li>
