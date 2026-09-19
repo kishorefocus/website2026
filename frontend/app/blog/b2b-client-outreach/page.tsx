@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     "cold outreach for b2b",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/blog/b2b-client-outreach",
+    canonical: "https://www.getyourclientsb2b.com/blog/b2b-client-outreach",
   },
   openGraph: {
     title: "How to Do B2B Client Outreach That Gets Replies (2025 Guide)",
     description: "Complete 2025 guide to B2B client outreach — find clients, write cold emails, set up sequences, and close deals.",
-    url: "https://getyourclientsb2b.com/blog/b2b-client-outreach",
+    url: "https://www.getyourclientsb2b.com/blog/b2b-client-outreach",
     siteName: "GetYourClientsB2B",
     type: "article",
   },
@@ -56,9 +56,9 @@ export default function B2BClientOutreachBlogPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Blog", url: "https://getyourclientsb2b.com/blog" },
-        { name: "B2B Client Outreach Guide", url: "https://getyourclientsb2b.com/blog/b2b-client-outreach" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Blog", url: "https://www.getyourclientsb2b.com/blog" },
+        { name: "B2B Client Outreach Guide", url: "https://www.getyourclientsb2b.com/blog/b2b-client-outreach" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

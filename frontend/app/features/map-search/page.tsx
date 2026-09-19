@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "find B2B clients by city",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/features/map-search",
+    canonical: "https://www.getyourclientsb2b.com/features/map-search",
   },
   openGraph: {
     title: "Find B2B Leads by Location — Map-Based Prospecting | GetYourClientsB2B",
     description:
       "Visually search for B2B leads on a live map. Filter by industry, country, or city — see lead density, plan territories, and start outreach immediately.",
-    url: "https://getyourclientsb2b.com/features/map-search",
+    url: "https://www.getyourclientsb2b.com/features/map-search",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — Map-Based B2B Lead Prospecting",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Find B2B Leads by Location — Map-Based Prospecting | GetYourClientsB2B",
     description:
       "Search B2B leads on a live map. Visualize lead density, plan territories, and start outreach immediately.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -74,9 +74,9 @@ export default function MapSearchPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Features", url: "https://getyourclientsb2b.com/features" },
-        { name: "Map Search", url: "https://getyourclientsb2b.com/features/map-search" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Features", url: "https://www.getyourclientsb2b.com/features" },
+        { name: "Map Search", url: "https://www.getyourclientsb2b.com/features/map-search" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

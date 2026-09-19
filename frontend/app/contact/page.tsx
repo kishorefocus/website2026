@@ -6,7 +6,7 @@ import { JsonLd, contactPageSchema, breadcrumbSchema } from "@/components/seo/Js
 // Server component wrapper — owns metadata.
 // Interactive form with useState lives in ContactPageClient.
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "Contact Us — GetYourClientsB2B Support & Sales",
@@ -52,8 +52,8 @@ export default function ContactPage() {
     <>
       <JsonLd data={contactPageSchema()} />
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Contact", url: "https://getyourclientsb2b.com/contact" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Contact", url: "https://www.getyourclientsb2b.com/contact" },
       ])} />
       <ContactPageClient />
     </>

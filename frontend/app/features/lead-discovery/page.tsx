@@ -24,18 +24,18 @@ export const metadata: Metadata = {
     "b2b lead discovery",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/features/lead-discovery",
+    canonical: "https://www.getyourclientsb2b.com/features/lead-discovery",
   },
   openGraph: {
     title: "B2B Lead Finder Tool — Find Leads by Industry & Country | GetYourClientsB2B",
     description:
       "Search and discover B2B leads across 190+ countries by industry, company size, and geography. Export verified contacts and run outreach — all in one platform.",
-    url: "https://getyourclientsb2b.com/features/lead-discovery",
+    url: "https://www.getyourclientsb2b.com/features/lead-discovery",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — B2B Lead Finder Tool",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "B2B Lead Finder Tool — Find Leads by Industry & Country | GetYourClientsB2B",
     description:
       "Search millions of B2B businesses by industry and country across 190+ countries. Free to try.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -86,9 +86,9 @@ export default function LeadDiscoveryPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Features", url: "https://getyourclientsb2b.com/features" },
-        { name: "B2B Lead Finder", url: "https://getyourclientsb2b.com/features/lead-discovery" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Features", url: "https://www.getyourclientsb2b.com/features" },
+        { name: "B2B Lead Finder", url: "https://www.getyourclientsb2b.com/features/lead-discovery" },
       ])} />
       <JsonLd data={softwareAppSchema()} />
       <JsonLd data={faqSchema(FAQS)} />

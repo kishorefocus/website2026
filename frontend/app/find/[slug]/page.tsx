@@ -8,7 +8,7 @@ import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { APP_LOGIN_URL } from "@/lib/constants";
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 // ─── Slug Data ──────────────────────────────────────────────────────────────
 

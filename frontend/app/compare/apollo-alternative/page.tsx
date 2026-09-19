@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "affordable Apollo alternative",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/compare/apollo-alternative",
+    canonical: "https://www.getyourclientsb2b.com/compare/apollo-alternative",
   },
   openGraph: {
     title: "Best Apollo.io Alternative in 2026 | GetYourClientsB2B",
     description:
       "GetYourClientsB2B vs Apollo.io — side-by-side feature & pricing comparison. Map-based B2B prospecting at a fraction of Apollo's cost.",
-    url: "https://getyourclientsb2b.com/compare/apollo-alternative",
+    url: "https://www.getyourclientsb2b.com/compare/apollo-alternative",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B vs Apollo.io — B2B Lead Generation Comparison",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Best Apollo.io Alternative in 2026 | GetYourClientsB2B",
     description:
       "Map-based B2B lead discovery + cold outreach CRM. A better Apollo.io alternative with flat-rate pricing.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -109,11 +109,11 @@ export default function ApolloAlternativePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", url: "https://getyourclientsb2b.com" },
-          { name: "Compare", url: "https://getyourclientsb2b.com/compare" },
+          { name: "Home", url: "https://www.getyourclientsb2b.com" },
+          { name: "Compare", url: "https://www.getyourclientsb2b.com/compare" },
           {
             name: "Apollo.io Alternative",
-            url: "https://getyourclientsb2b.com/compare/apollo-alternative",
+            url: "https://www.getyourclientsb2b.com/compare/apollo-alternative",
           },
         ])}
       />

@@ -5,7 +5,7 @@ import Link from "next/link";
 import { SUPPORT_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
 import { JsonLd, webPageSchema } from "@/components/seo/JsonLd";
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "Terms of Service — GetYourClientsB2B",
@@ -99,8 +99,8 @@ export default function TermsPage() {
               <h2 className="font-display text-lg font-bold text-foreground">1. Introduction and Agreement</h2>
               <p>
                 Welcome to <strong>GetYourClients</strong> (&quot;Company&quot;, &quot;we&quot;, &quot;our&quot;, or &quot;us&quot;), available via{" "}
-                <Link href="https://getyourclientsb2b.com" className="text-primary underline">
-                  https://getyourclientsb2b.com
+                <Link href="https://www.getyourclientsb2b.com" className="text-primary underline">
+                  https://www.getyourclientsb2b.com
                 </Link>{" "}
                 and associated services. By registering an account, accessing, or using our platform, you agree to be bound by these Terms of Service (&quot;Terms&quot;).
               </p>
@@ -192,7 +192,7 @@ export default function TermsPage() {
                 <p><strong>GetYourClients, Inc.</strong></p>
                 <p>Support Desk: <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">{SUPPORT_EMAIL}</a></p>
                 <p>Legal &amp; Administration: <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">{ADMIN_EMAIL}</a></p>
-                <p>Website: <Link href="/" className="text-primary underline">https://getyourclientsb2b.com</Link></p>
+                <p>Website: <Link href="/" className="text-primary underline">https://www.getyourclientsb2b.com</Link></p>
               </div>
             </section>
           </div>

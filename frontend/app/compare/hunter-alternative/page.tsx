@@ -26,18 +26,18 @@ export const metadata: Metadata = {
     "free hunter alternative",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/compare/hunter-alternative",
+    canonical: "https://www.getyourclientsb2b.com/compare/hunter-alternative",
   },
   openGraph: {
     title: "Best Hunter Alternative 2025 — B2B Leads & Outreach CRM | GetYourClientsB2B",
     description:
       "GetYourClientsB2B vs Hunter.io — email finding + built-in CRM + outreach sequences + map-based prospecting. One tool instead of three. Try free.",
-    url: "https://getyourclientsb2b.com/compare/hunter-alternative",
+    url: "https://www.getyourclientsb2b.com/compare/hunter-alternative",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B vs Hunter.io — Best Hunter Alternative 2025",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Best Hunter Alternative 2025 — B2B Leads & Outreach CRM",
     description:
       "More than just email finding. Map-based B2B prospecting + built-in CRM + outreach automation. The #1 Hunter.io alternative.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -230,9 +230,9 @@ export default function HunterAlternativePage() {
     <>
       <JsonLd
         data={breadcrumbSchema([
-          { name: "Home", url: "https://getyourclientsb2b.com" },
-          { name: "Compare", url: "https://getyourclientsb2b.com/compare" },
-          { name: "Hunter.io Alternative", url: "https://getyourclientsb2b.com/compare/hunter-alternative" },
+          { name: "Home", url: "https://www.getyourclientsb2b.com" },
+          { name: "Compare", url: "https://www.getyourclientsb2b.com/compare" },
+          { name: "Hunter.io Alternative", url: "https://www.getyourclientsb2b.com/compare/hunter-alternative" },
         ])}
       />
       <JsonLd data={faqSchema(FAQS)} />

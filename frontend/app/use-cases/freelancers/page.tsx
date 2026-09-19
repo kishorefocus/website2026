@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "B2B prospecting for solo freelancers",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/use-cases/freelancers",
+    canonical: "https://www.getyourclientsb2b.com/use-cases/freelancers",
   },
   openGraph: {
     title: "B2B Client Finder for Freelancers | GetYourClientsB2B",
     description:
       "Find your next B2B client by industry and country, send personalized cold emails, and manage your project pipeline — from one affordable freelancer-friendly tool.",
-    url: "https://getyourclientsb2b.com/use-cases/freelancers",
+    url: "https://www.getyourclientsb2b.com/use-cases/freelancers",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — B2B Client Finder for Freelancers",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "B2B Client Finder for Freelancers | GetYourClientsB2B",
     description:
       "Find B2B clients by industry and country. Send personalized cold emails and land projects — without cold calling.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -83,9 +83,9 @@ export default function FreelancersUseCasePage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Use Cases", url: "https://getyourclientsb2b.com/use-cases" },
-        { name: "For Freelancers", url: "https://getyourclientsb2b.com/use-cases/freelancers" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Use Cases", url: "https://www.getyourclientsb2b.com/use-cases" },
+        { name: "For Freelancers", url: "https://www.getyourclientsb2b.com/use-cases/freelancers" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

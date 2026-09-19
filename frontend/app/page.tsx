@@ -6,7 +6,7 @@ import { HomePageClient } from "@/components/marketing/home-page-client";
 // This server component owns all metadata. The interactive client UI lives in
 // HomePageClient (components/marketing/home-page-client.tsx).
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "Find B2B Clients Online — B2B Client Discovery & Cold Outreach CRM",

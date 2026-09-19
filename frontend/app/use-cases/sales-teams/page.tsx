@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "sales development representative tools",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/use-cases/sales-teams",
+    canonical: "https://www.getyourclientsb2b.com/use-cases/sales-teams",
   },
   openGraph: {
     title: "B2B Prospecting Tool for Sales Teams | GetYourClientsB2B",
     description:
       "Equip your sales team with a B2B prospecting tool that finds leads, runs outreach, and manages pipeline — all in one platform. Save 4+ hours per rep per day.",
-    url: "https://getyourclientsb2b.com/use-cases/sales-teams",
+    url: "https://www.getyourclientsb2b.com/use-cases/sales-teams",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — B2B Prospecting Tool for Sales Teams",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "B2B Prospecting Tool for Sales Teams | GetYourClientsB2B",
     description:
       "Find leads, run outreach, and manage pipeline — all in one platform. Sales teams save 4+ hours per rep per day.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -83,9 +83,9 @@ export default function SalesTeamsUseCasePage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Use Cases", url: "https://getyourclientsb2b.com/use-cases" },
-        { name: "For Sales Teams", url: "https://getyourclientsb2b.com/use-cases/sales-teams" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Use Cases", url: "https://www.getyourclientsb2b.com/use-cases" },
+        { name: "For Sales Teams", url: "https://www.getyourclientsb2b.com/use-cases/sales-teams" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

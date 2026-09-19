@@ -11,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { APP_LOGIN_URL, SUPPORT_EMAIL, SALES_EMAIL, FOUNDER_EMAIL } from "@/lib/constants";
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "About Us — GetYourClientsB2B | Global B2B Lead Discovery Platform",

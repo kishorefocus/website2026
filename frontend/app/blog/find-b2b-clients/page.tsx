@@ -22,12 +22,12 @@ export const metadata: Metadata = {
     "find b2b leads",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/blog/find-b2b-clients",
+    canonical: "https://www.getyourclientsb2b.com/blog/find-b2b-clients",
   },
   openGraph: {
     title: "How to Find B2B Clients Online in 2025 — Complete Guide",
     description: "7 proven methods to find B2B clients online in 2025 — with tools, scripts, and a step-by-step action plan.",
-    url: "https://getyourclientsb2b.com/blog/find-b2b-clients",
+    url: "https://www.getyourclientsb2b.com/blog/find-b2b-clients",
     siteName: "GetYourClientsB2B",
     type: "article",
   },
@@ -126,9 +126,9 @@ export default function FindB2BClientsBlogPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Blog", url: "https://getyourclientsb2b.com/blog" },
-        { name: "How to Find B2B Clients", url: "https://getyourclientsb2b.com/blog/find-b2b-clients" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Blog", url: "https://www.getyourclientsb2b.com/blog" },
+        { name: "How to Find B2B Clients", url: "https://www.getyourclientsb2b.com/blog/find-b2b-clients" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     "email finder alternative to hunter",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/blog/hunter-alternatives",
+    canonical: "https://www.getyourclientsb2b.com/blog/hunter-alternatives",
   },
   openGraph: {
     title: "7 Best Hunter.io Alternatives in 2025 (Ranked)",
     description: "Top 7 Hunter alternatives ranked by features, pricing, and ease of use for B2B teams.",
-    url: "https://getyourclientsb2b.com/blog/hunter-alternatives",
+    url: "https://www.getyourclientsb2b.com/blog/hunter-alternatives",
     siteName: "GetYourClientsB2B",
     type: "article",
   },
@@ -147,9 +147,9 @@ export default function HunterAlternativesBlogPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Blog", url: "https://getyourclientsb2b.com/blog" },
-        { name: "7 Best Hunter Alternatives", url: "https://getyourclientsb2b.com/blog/hunter-alternatives" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Blog", url: "https://www.getyourclientsb2b.com/blog" },
+        { name: "7 Best Hunter Alternatives", url: "https://www.getyourclientsb2b.com/blog/hunter-alternatives" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

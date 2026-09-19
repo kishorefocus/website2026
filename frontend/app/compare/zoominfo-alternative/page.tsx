@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "affordable B2B data platform",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/compare/zoominfo-alternative",
+    canonical: "https://www.getyourclientsb2b.com/compare/zoominfo-alternative",
   },
   openGraph: {
     title: "ZoomInfo Alternative for Startups | GetYourClientsB2B",
     description:
       "Don't pay $15K+/year for ZoomInfo. GetYourClientsB2B gives startups and small teams enterprise-grade B2B discovery at a fraction of the cost.",
-    url: "https://getyourclientsb2b.com/compare/zoominfo-alternative",
+    url: "https://www.getyourclientsb2b.com/compare/zoominfo-alternative",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B vs ZoomInfo — Startup-Friendly B2B Data Platform",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "ZoomInfo Alternative for Startups | GetYourClientsB2B",
     description:
       "Enterprise B2B lead discovery without the $15K ZoomInfo price tag. Map-based prospecting + cold outreach CRM.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -108,9 +108,9 @@ export default function ZoomInfoAlternativePage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Compare", url: "https://getyourclientsb2b.com/compare" },
-        { name: "ZoomInfo Alternative", url: "https://getyourclientsb2b.com/compare/zoominfo-alternative" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Compare", url: "https://www.getyourclientsb2b.com/compare" },
+        { name: "ZoomInfo Alternative", url: "https://www.getyourclientsb2b.com/compare/zoominfo-alternative" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

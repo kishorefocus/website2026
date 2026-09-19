@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Guides, strategies, and tools for B2B client discovery, cold email outreach, and sales automation. Written by the GetYourClientsB2B team.",
   alternates: {
-    canonical: "https://getyourclientsb2b.com/blog",
+    canonical: "https://www.getyourclientsb2b.com/blog",
   },
 };
 

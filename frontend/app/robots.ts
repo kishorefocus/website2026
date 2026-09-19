@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/onboard/", "/success/", "/cancel/", "/_next/"],
       },
     ],
-    sitemap: "https://getyourclientsb2b.com/sitemap.xml",
-    host: "https://getyourclientsb2b.com",
+    sitemap: "https://www.getyourclientsb2b.com/sitemap.xml",
+    host: "https://www.getyourclientsb2b.com",
   };
 }

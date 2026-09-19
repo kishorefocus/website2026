@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "multi-client B2B outreach",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/use-cases/agencies",
+    canonical: "https://www.getyourclientsb2b.com/use-cases/agencies",
   },
   openGraph: {
     title: "B2B Lead Generation for Agencies | GetYourClientsB2B",
     description:
       "Discover and close clients across any industry and country. GetYourClientsB2B powers B2B agencies with scalable prospecting, multi-client pipelines, and outreach automation.",
-    url: "https://getyourclientsb2b.com/use-cases/agencies",
+    url: "https://www.getyourclientsb2b.com/use-cases/agencies",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — B2B Lead Generation for Agencies",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "B2B Lead Generation for Agencies | GetYourClientsB2B",
     description:
       "Scalable B2B client discovery for agencies. Multi-client pipelines, flat-rate pricing, and outreach automation across 190+ countries.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -78,9 +78,9 @@ export default function AgenciesUseCasePage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Use Cases", url: "https://getyourclientsb2b.com/use-cases" },
-        { name: "For Agencies", url: "https://getyourclientsb2b.com/use-cases/agencies" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Use Cases", url: "https://www.getyourclientsb2b.com/use-cases" },
+        { name: "For Agencies", url: "https://www.getyourclientsb2b.com/use-cases/agencies" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

@@ -26,18 +26,18 @@ export const metadata: Metadata = {
     "cold email outreach tool",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/features/crm-outreach",
+    canonical: "https://www.getyourclientsb2b.com/features/crm-outreach",
   },
   openGraph: {
     title: "Client Outreach Tool — B2B Cold Outreach CRM & Email Automation | GetYourClientsB2B",
     description:
       "The best client outreach tool for B2B teams. Find leads, run sequences, track replies, and manage pipeline — all in one platform. Try free.",
-    url: "https://getyourclientsb2b.com/features/crm-outreach",
+    url: "https://www.getyourclientsb2b.com/features/crm-outreach",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B — Client Outreach CRM Tool",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Client Outreach Tool — B2B Cold Outreach CRM & Email Automation",
     description:
       "Find leads, run cold email sequences, track replies — all in one client outreach platform. Try free.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -156,9 +156,9 @@ export default function CRMOutreachPage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Features", url: "https://getyourclientsb2b.com/features" },
-        { name: "Client Outreach CRM", url: "https://getyourclientsb2b.com/features/crm-outreach" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Features", url: "https://www.getyourclientsb2b.com/features" },
+        { name: "Client Outreach CRM", url: "https://www.getyourclientsb2b.com/features/crm-outreach" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 

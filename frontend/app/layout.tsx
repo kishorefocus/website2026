@@ -26,7 +26,7 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

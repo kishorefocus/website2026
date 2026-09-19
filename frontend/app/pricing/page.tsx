@@ -6,7 +6,7 @@ import { PricingPageClient } from "@/components/marketing/pricing-page-client";
 // Server component wrapper — owns all metadata & structured data.
 // Interactive billing toggle UI lives in PricingPageClient.
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "Pricing — Affordable B2B Lead Generation Tool",

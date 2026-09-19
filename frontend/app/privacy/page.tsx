@@ -5,7 +5,7 @@ import Link from "next/link";
 import { ADMIN_EMAIL, SUPPORT_EMAIL } from "@/lib/constants";
 import { JsonLd, webPageSchema } from "@/components/seo/JsonLd";
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — GetYourClientsB2B",
@@ -99,7 +99,7 @@ export default function PrivacyPage() {
               <h2 className="font-display text-lg font-bold text-foreground">1. Overview</h2>
               <p>
                 GetYourClients (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) operates the website{" "}
-                <Link href="/" className="text-primary underline">https://getyourclientsb2b.com</Link> and associated B2B sales intelligence software. We are dedicated to maintaining the privacy, confidentiality, and security of the personal information of our users and visitors.
+                <Link href="/" className="text-primary underline">https://www.getyourclientsb2b.com</Link> and associated B2B sales intelligence software. We are dedicated to maintaining the privacy, confidentiality, and security of the personal information of our users and visitors.
               </p>
               <p>
                 This Privacy Policy explains what personal data we collect, how it is processed, with whom it is shared, and how you can exercise your privacy rights under applicable regulations such as the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA).
@@ -193,7 +193,7 @@ export default function PrivacyPage() {
                 <p><strong>GetYourClients, Inc. - Privacy &amp; Data Operations</strong></p>
                 <p>Administration: <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">{ADMIN_EMAIL}</a></p>
                 <p>Support Desk: <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">{SUPPORT_EMAIL}</a></p>
-                <p>Website: <Link href="/" className="text-primary underline">https://getyourclientsb2b.com</Link></p>
+                <p>Website: <Link href="/" className="text-primary underline">https://www.getyourclientsb2b.com</Link></p>
               </div>
             </section>
           </div>

@@ -18,7 +18,7 @@ import { MarketingFooter } from "@/components/marketing/marketing-footer";
 import { JsonLd, breadcrumbSchema, faqSchema } from "@/components/seo/JsonLd";
 import { APP_LOGIN_URL } from "@/lib/constants";
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 // ─── Industry Data ─────────────────────────────────────────────────────────
 

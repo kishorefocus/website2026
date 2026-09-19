@@ -6,7 +6,7 @@ import { ShieldCheck, RefreshCw, XCircle, Mail } from "lucide-react";
 import { APP_LOGIN_URL, SUPPORT_EMAIL, ADMIN_EMAIL } from "@/lib/constants";
 import { JsonLd, webPageSchema } from "@/components/seo/JsonLd";
 
-const BASE_URL = "https://getyourclientsb2b.com";
+const BASE_URL = "https://www.getyourclientsb2b.com";
 
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy — GetYourClientsB2B",
@@ -202,7 +202,7 @@ export default function RefundPolicyPage() {
                 <p><strong>GetYourClients, Inc. - Customer Support &amp; Billing</strong></p>
                 <p>Support &amp; Refunds: <a href={`mailto:${SUPPORT_EMAIL}`} className="text-primary underline font-mono">{SUPPORT_EMAIL}</a></p>
                 <p>Escalations &amp; Legal: <a href={`mailto:${ADMIN_EMAIL}`} className="text-primary underline font-mono">{ADMIN_EMAIL}</a></p>
-                <p>Support URL: <Link href="/contact" className="text-primary underline">https://getyourclientsb2b.com/contact</Link></p>
+                <p>Support URL: <Link href="/contact" className="text-primary underline">https://www.getyourclientsb2b.com/contact</Link></p>
               </div>
             </section>
           </div>

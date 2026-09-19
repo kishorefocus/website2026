@@ -19,18 +19,18 @@ export const metadata: Metadata = {
     "Lusha replacement",
   ],
   alternates: {
-    canonical: "https://getyourclientsb2b.com/compare/lusha-alternative",
+    canonical: "https://www.getyourclientsb2b.com/compare/lusha-alternative",
   },
   openGraph: {
     title: "Lusha Alternative — B2B Lead Discovery & Outreach CRM | GetYourClientsB2B",
     description:
       "Compare GetYourClientsB2B vs Lusha. Map-based prospecting, built-in CRM, and 190+ country coverage vs Lusha's contact enrichment.",
-    url: "https://getyourclientsb2b.com/compare/lusha-alternative",
+    url: "https://www.getyourclientsb2b.com/compare/lusha-alternative",
     siteName: "GetYourClientsB2B",
     type: "website",
     images: [
       {
-        url: "https://getyourclientsb2b.com/images/og-image.png",
+        url: "https://www.getyourclientsb2b.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "GetYourClientsB2B vs Lusha — B2B Data & Outreach Comparison",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: "Lusha Alternative — B2B Lead Discovery & Outreach CRM | GetYourClientsB2B",
     description:
       "Map-based B2B lead discovery + built-in outreach CRM. Better coverage than Lusha, with flat-rate pricing.",
-    images: ["https://getyourclientsb2b.com/images/og-image.png"],
+    images: ["https://www.getyourclientsb2b.com/images/og-image.png"],
   },
 };
 
@@ -108,9 +108,9 @@ export default function LushaAlternativePage() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([
-        { name: "Home", url: "https://getyourclientsb2b.com" },
-        { name: "Compare", url: "https://getyourclientsb2b.com/compare" },
-        { name: "Lusha Alternative", url: "https://getyourclientsb2b.com/compare/lusha-alternative" },
+        { name: "Home", url: "https://www.getyourclientsb2b.com" },
+        { name: "Compare", url: "https://www.getyourclientsb2b.com/compare" },
+        { name: "Lusha Alternative", url: "https://www.getyourclientsb2b.com/compare/lusha-alternative" },
       ])} />
       <JsonLd data={faqSchema(FAQS)} />
 
