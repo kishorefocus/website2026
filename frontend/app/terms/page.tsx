@@ -130,9 +130,9 @@ export default function TermsPage() {
             <section className="space-y-3">
               <h2 className="font-display text-lg font-bold text-foreground">4. Subscriptions, Billing, and Merchant of Record</h2>
               <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-2">
-                <p className="font-semibold text-foreground">Notice Regarding Payment Processing (Paddle):</p>
+                <p className="font-semibold text-foreground">Notice Regarding Payment Processing (Razorpay):</p>
                 <p>
-                  Our order process is conducted by our online reseller <strong>Paddle.com</strong>. Paddle.com is the <strong>Merchant of Record</strong> for all our orders. Paddle provides customer service inquiries regarding billing and handles returns, invoicing, and applicable local sales tax or Value Added Tax (VAT).
+                  All payments are securely processed by <strong>Razorpay</strong>, India&apos;s leading PCI-DSS Level 1 compliant payment gateway. Razorpay provides secure checkout, invoice issuance, and payment processing services.
                 </p>
               </div>
               <ul className="list-disc pl-5 space-y-2 mt-2">
@@ -140,7 +140,7 @@ export default function TermsPage() {
                   <strong>Recurring Billing:</strong> Paid subscriptions (such as Growth, Pro, and Enterprise) are billed on a recurring periodic basis (monthly or annually) according to your selected plan.
                 </li>
                 <li>
-                  <strong>Automatic Renewal:</strong> Unless canceled prior to the end of the current billing cycle, your subscription will automatically renew at the then-prevailing subscription fee using the payment method on file with Paddle.
+                  <strong>Automatic Renewal:</strong> Unless canceled prior to the end of the current billing cycle, your subscription will automatically renew at the then-prevailing subscription fee using the payment method on file with Razorpay.
                 </li>
                 <li>
                   <strong>Cancellation:</strong> You may cancel your subscription at any time directly through your account dashboard under <em>Settings &gt; Billing</em>. Cancellation takes effect at the conclusion of your current paid billing period.
@@ -172,7 +172,7 @@ export default function TermsPage() {
             <section className="space-y-3">
               <h2 className="font-display text-lg font-bold text-foreground">7. Disclaimer of Warranties and Limitation of Liability</h2>
               <p>
-                THE SERVICE IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, GETYOURCLIENTS AND ITS RESELLER PADDLE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE OF THE SERVICE.
+                THE SERVICE IS PROVIDED ON AN &quot;AS IS&quot; AND &quot;AS AVAILABLE&quot; BASIS WITHOUT WARRANTIES OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, GETYOURCLIENTS AND ITS PAYMENT PROCESSOR RAZORPAY SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF YOUR USE OF THE SERVICE.
               </p>
             </section>
 

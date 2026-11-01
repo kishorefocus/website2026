@@ -158,7 +158,7 @@ export function ContactPageClient() {
                   <div className="text-xs text-muted-foreground leading-relaxed">
                     <h3 className="font-semibold text-foreground">GetYourClients, Inc.</h3>
                     <p className="mt-0.5">Web: https://getyourclientsb2b.com</p>
-                    <p>Payments reseller: Paddle.com</p>
+                    <p>Payment processor: Razorpay</p>
                   </div>
                 </div>
               </div>

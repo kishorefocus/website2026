@@ -109,7 +109,7 @@ const values = [
     icon: ShieldCheck,
     title: "Privacy & Compliance First",
     description:
-      "We strictly adhere to GDPR, CAN-SPAM, and CCPA regulations. Our data is ethically sourced from public commercial registries and verified in real time. Payments and invoices are securely processed by Paddle (Merchant of Record).",
+      "We strictly adhere to GDPR, CAN-SPAM, and CCPA regulations. Our data is ethically sourced from public commercial registries and verified in real time. Payments and invoices are securely processed by Razorpay (PCI-DSS Level 1 compliant).",
   },
 ];
 
@@ -268,8 +268,8 @@ export default function AboutPage() {
                       desc: "Zero scraping of sensitive personal data. We only index publicly registered commercial enterprise contacts.",
                     },
                     {
-                      title: "Merchant of Record Security",
-                      desc: "All billing, taxes, and subscriptions are managed securely by Paddle.com with full PCI-DSS Level 1 compliance.",
+                      title: "Payment Security & Compliance",
+                      desc: "All billing and subscriptions are managed securely by Razorpay with full PCI-DSS Level 1 compliance and 256-bit encryption.",
                     },
                   ].map((item, i) => (
                     <div key={i} className="flex gap-3">
@@ -374,7 +374,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* ─── Security & Merchant of Record ──────────────────────── */}
+        {/* ─── Security & Payment Compliance ──────────────────────── */}
         <section className="py-16 md:py-20 border-b border-border">
           <div className="mx-auto max-w-7xl px-6">
             <div className="rounded-2xl border border-border bg-card p-8 md:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
@@ -384,10 +384,10 @@ export default function AboutPage() {
                   Enterprise Trust &amp; Payment Compliance
                 </div>
                 <h3 className="mt-3 font-display text-2xl font-bold">
-                  Secure Billing Powered by Paddle.com
+                  Secure Billing Powered by Razorpay
                 </h3>
                 <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                  Paddle is our authorized online Merchant of Record. Paddle conducts all checkout operations, currency conversions, sales tax/VAT compliance, and PCI-DSS Level 1 tokenized payments. You are protected with our 14-day money-back guarantee.
+                  All payments on GetYourClients are processed by Razorpay, India&apos;s leading PCI-DSS Level 1 compliant payment gateway. Razorpay conducts all checkout operations, invoice issuance, and tokenized payments. You are protected with our 14-day money-back guarantee.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-3 text-xs text-muted-foreground">
                   <span className="trust-badge">SOC 2 Type II Aligned</span>

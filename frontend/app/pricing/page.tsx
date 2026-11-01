@@ -11,7 +11,7 @@ const BASE_URL = "https://www.getyourclientsb2b.com";
 export const metadata: Metadata = {
   title: "Pricing — Affordable B2B Lead Generation Tool",
   description:
-    "GetYourClientsB2B pricing starts free. Compare Growth ($19/mo), Pro ($49/mo), and Enterprise plans for B2B lead discovery, map-based prospecting, and cold outreach CRM. No hidden fees.",
+    "GetYourClientsB2B pricing starts free. Compare Growth (₹1,900/mo), Pro (₹4,900/mo), and Enterprise plans for B2B lead discovery, map-based prospecting, and cold outreach CRM. No hidden fees.",
   keywords: [
     "affordable B2B lead generation tool",
     "B2B prospecting platform pricing",
@@ -52,12 +52,12 @@ const PRICING_FAQS = [
   {
     question: "How does billing and subscription renewal work?",
     answer:
-      "All paid plans (Growth, Pro, Enterprise) are billed as recurring subscriptions, either monthly or annually based on your selection. Your subscription automatically renews at the start of each billing period unless canceled.",
+      "All paid plans (Growth, Pro, Enterprise) are billed in INR as recurring subscriptions, either monthly or annually based on your selection. You can manage or cancel your subscription at any time from your dashboard.",
   },
   {
     question: "Who processes my payments?",
     answer:
-      "Our orders and payments are conducted by Paddle.com, our authorized Merchant of Record. Paddle handles all global payment processing, automated VAT/sales tax calculation, and PCI-DSS compliant secure checkouts.",
+      "All payments are securely processed by Razorpay, India's leading payment gateway. Razorpay is PCI-DSS compliant and uses 256-bit SSL encryption to keep your financial data safe.",
   },
   {
     question: "Can I cancel my subscription at any time?",
@@ -72,12 +72,12 @@ const PRICING_FAQS = [
   {
     question: "What payment methods are supported?",
     answer:
-      "Through Paddle, we accept major credit and debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, and Google Pay, depending on your region and currency.",
+      "Via Razorpay, we accept UPI (PhonePe, Google Pay, Paytm), Net Banking, Credit & Debit Cards (Visa, MasterCard, RuPay, Amex), and popular wallets — covering virtually every Indian payment method.",
   },
   {
     question: "Can I switch plans later?",
     answer:
-      "Yes. You can upgrade or downgrade your plan at any time by contacting our support team. Prorated adjustments will be automatically calculated.",
+      "Yes! You can upgrade or downgrade your plan at any time directly in your account dashboard. Simply select the desired plan and complete the checkout via Razorpay.",
   },
 ];
 

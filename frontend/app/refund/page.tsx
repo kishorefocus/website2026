@@ -11,14 +11,14 @@ const BASE_URL = "https://www.getyourclientsb2b.com";
 export const metadata: Metadata = {
   title: "Refund & Cancellation Policy — GetYourClientsB2B",
   description:
-    "Understand the GetYourClientsB2B 14-day refund guarantee, cancellation procedures, and Paddle billing policies.",
+    "Understand the GetYourClientsB2B 14-day refund guarantee, cancellation procedures, and Razorpay billing policies.",
   alternates: {
     canonical: `${BASE_URL}/refund`,
   },
   openGraph: {
     title: "Refund & Cancellation Policy — GetYourClientsB2B",
     description:
-      "GetYourClientsB2B offers a 14-day money-back guarantee. Learn about our refund process, cancellation steps, and Paddle billing policies.",
+      "GetYourClientsB2B offers a 14-day money-back guarantee. Learn about our refund process, cancellation steps, and Razorpay billing policies.",
     url: `${BASE_URL}/refund`,
     siteName: "GetYourClientsB2B",
     type: "website",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     site: "@GetYourClientsB2B",
     title: "Refund & Cancellation Policy — GetYourClientsB2B",
     description:
-      "14-day money-back guarantee. Learn about GetYourClientsB2B refunds, cancellation, and Paddle billing.",
+      "14-day money-back guarantee. Learn about GetYourClientsB2B refunds, cancellation, and Razorpay billing.",
     images: [`${BASE_URL}/images/og-image.png`],
   },
   robots: {
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
 };
 
 export default function RefundPolicyPage() {
-  const lastUpdated = "September 10, 2026";
+  const lastUpdated = "October 15, 2026";
 
   return (
     <>
       <JsonLd data={webPageSchema({
         name: "Refund & Cancellation Policy — GetYourClientsB2B",
         url: `${BASE_URL}/refund`,
-        description: "Understand the GetYourClientsB2B 14-day refund guarantee, cancellation procedures, and Paddle billing policies.",
+        description: "Understand the GetYourClientsB2B 14-day refund guarantee, cancellation procedures, and Razorpay billing policies.",
         breadcrumb: [
           { name: "Home", url: BASE_URL },
           { name: "Refund Policy", url: `${BASE_URL}/refund` },
@@ -122,9 +122,9 @@ export default function RefundPolicyPage() {
           {/* Policy Body */}
           <div className="mt-10 space-y-8 text-sm leading-relaxed text-muted-foreground">
             <section className="space-y-3">
-              <h2 className="font-display text-lg font-bold text-foreground">1. Merchant of Record Disclosure</h2>
+              <h2 className="font-display text-lg font-bold text-foreground">1. Payment Processor Disclosure</h2>
               <p>
-                Our order process is conducted by our online reseller <strong>Paddle.com</strong>. Paddle.com is the <strong>Merchant of Record</strong> for all our orders. Paddle provides all customer service inquiries regarding billing and handles returns, refunds, and sales tax/VAT compliance.
+                All payments on GetYourClients are processed by <strong>Razorpay</strong>, India&apos;s leading PCI-DSS Level 1 compliant payment gateway. Razorpay handles checkout, invoice issuance, and payment security. For payment-related queries, you can also reach Razorpay support through the Razorpay portal.
               </p>
             </section>
 
@@ -162,7 +162,7 @@ export default function RefundPolicyPage() {
             <section className="space-y-3">
               <h2 className="font-display text-lg font-bold text-foreground">4. How to Request a Refund</h2>
               <p>
-                To request a refund, simply email our customer support team or Paddle with your details:
+                To request a refund, simply email our customer support team with your details:
               </p>
               <div className="rounded-xl border border-border bg-card/60 p-4 text-xs space-y-2">
                 <div className="flex items-center gap-2 font-semibold text-foreground">
@@ -177,21 +177,21 @@ export default function RefundPolicyPage() {
                 <p>Please include the following information:</p>
                 <ul className="list-disc pl-5 space-y-1">
                   <li>Your account email address</li>
-                  <li>Paddle Transaction ID or Invoice Number (found on your payment receipt email from Paddle)</li>
+                  <li>Razorpay Payment ID or Transaction ID (found on your payment receipt email from Razorpay)</li>
                   <li>A brief note explaining why you are requesting a refund (to help us improve our product)</li>
                 </ul>
               </div>
               <p>
-                Our team reviews all refund requests promptly. Once approved, the refund is initiated via Paddle and credited back to your original payment method (credit card, PayPal, etc.) within <strong>3 to 5 business days</strong>, depending on your card issuer.
+                Our team reviews all refund requests promptly. Once approved, the refund is initiated via Razorpay and credited back to your original payment method within <strong>5 to 7 business days</strong>, depending on your bank or card issuer.
               </p>
             </section>
 
             <section className="space-y-3">
-              <h2 className="font-display text-lg font-bold text-foreground">5. Paddle Buyer Support</h2>
+              <h2 className="font-display text-lg font-bold text-foreground">5. Razorpay Payment Support</h2>
               <p>
-                Because Paddle is the Merchant of Record, you can also contact Paddle directly regarding transaction receipts, invoice copies, or refund inquiries via their dedicated buyer portal at{" "}
-                <a href="https://paddle.net" target="_blank" rel="noopener noreferrer" className="text-primary underline">
-                  paddle.net
+                Because Razorpay processes your payment, you may also contact Razorpay directly for transaction receipts, payment confirmations, or refund status inquiries via the{" "}
+                <a href="https://razorpay.com" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                  Razorpay support portal
                 </a>.
               </p>
             </section>

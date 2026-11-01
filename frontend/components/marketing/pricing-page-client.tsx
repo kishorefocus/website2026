@@ -32,8 +32,8 @@ const pricingPlans = [
     key: "growth",
     name: "Growth",
     description: "For individual sales reps and consultants growing their outbound pipeline.",
-    monthlyPrice: 19,
-    yearlyPrice: 15,
+    monthlyPrice: 1900,
+    yearlyPrice: 1500,
     features: [
       "500 verified leads / month",
       "3 team seats included",
@@ -51,8 +51,8 @@ const pricingPlans = [
     key: "pro",
     name: "Pro",
     description: "For fast-scaling sales teams who need high volume and automated discovery.",
-    monthlyPrice: 49,
-    yearlyPrice: 39,
+    monthlyPrice: 4900,
+    yearlyPrice: 3900,
     features: [
       "Unlimited verified leads",
       "10 team seats included",
@@ -70,8 +70,8 @@ const pricingPlans = [
     key: "enterprise",
     name: "Enterprise",
     description: "For organizations demanding custom integrations, maximum seats, and dedicated SLAs.",
-    monthlyPrice: 149,
-    yearlyPrice: 119,
+    monthlyPrice: 14900,
+    yearlyPrice: 11900,
     features: [
       "Unlimited everything",
       "Unlimited team seats",
@@ -226,7 +226,7 @@ const featureComparison = [
         enterprise: "30 Days",
       },
       {
-        name: "Merchant of Record (Paddle PCI-DSS)",
+        name: "Payment Security (Razorpay PCI-DSS Level 1)",
         free: true,
         growth: true,
         pro: true,
@@ -253,11 +253,11 @@ const featureComparison = [
 const faqs = [
   {
     q: "How does billing and subscription renewal work?",
-    a: "All paid plans (Growth, Pro, Enterprise) are billed as recurring subscriptions, either monthly or annually based on your selection. Your subscription automatically renews at the start of each billing period unless canceled.",
+    a: "All paid plans (Growth, Pro, Enterprise) are billed in INR as recurring subscriptions, either monthly or annually based on your selection. You can manage or cancel your subscription at any time from your dashboard.",
   },
   {
     q: "Who processes my payments?",
-    a: "Our orders and payments are conducted by Paddle.com, our authorized Merchant of Record. Paddle handles all global payment processing, automated VAT/sales tax calculation, and PCI-DSS compliant secure checkouts.",
+    a: "All payments are securely processed by Razorpay, India's leading payment gateway. Razorpay is PCI-DSS compliant and uses 256-bit SSL encryption to keep your financial data safe.",
   },
   {
     q: "Can I cancel my subscription at any time?",
@@ -273,7 +273,7 @@ const faqs = [
   },
   {
     q: "What payment methods are supported?",
-    a: "Through Paddle, we accept major credit and debit cards (Visa, MasterCard, American Express, Discover), PayPal, Apple Pay, and Google Pay, depending on your region and currency.",
+    a: "Via Razorpay, we accept UPI (PhonePe, Google Pay, Paytm), Net Banking, Credit & Debit Cards (Visa, MasterCard, RuPay, Amex), and popular wallets — covering virtually every Indian payment method.",
   },
 ];
 
@@ -369,10 +369,10 @@ export function PricingPageClient() {
 
                     <div className="mt-6 flex items-baseline">
                       <span className="font-display text-4xl font-extrabold tracking-tight">
-                        ${price}
+                        {price === 0 ? "Free" : `₹${price.toLocaleString("en-IN")}`}
                       </span>
                       <span className="ml-1.5 text-xs text-muted-foreground">
-                        / month {billingInterval === "year" && price > 0 && "(billed annually)"}
+                        {price > 0 && `/ month ${billingInterval === "year" ? "(billed annually)" : ""}`}
                       </span>
                     </div>
                   </div>
@@ -541,25 +541,25 @@ export function PricingPageClient() {
             </div>
           </div>
 
-          {/* Security & Merchant of Record Strip */}
+          {/* Security & Payment Processor Strip */}
           <div className="mt-16 rounded-2xl border border-border bg-card/60 p-6 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-4">
               <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Shield className="h-6 w-6" />
               </div>
               <div>
-                <h4 className="text-sm font-semibold text-foreground">Secure Payments Powered by Paddle</h4>
+                <h4 className="text-sm font-semibold text-foreground">Secure Payments via Razorpay</h4>
                 <p className="text-xs text-muted-foreground mt-0.5">
-                  Paddle.com is our Merchant of Record. All checkouts are 256-bit encrypted, PCI-DSS Level 1 compliant, and support local currencies.
+                  Payments are processed by Razorpay — PCI-DSS Level 1 compliant, 256-bit SSL encrypted, trusted by 500,000+ Indian businesses.
                 </p>
               </div>
             </div>
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Visa</span>
-              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Mastercard</span>
-              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Amex</span>
-              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">PayPal</span>
-              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Apple Pay</span>
+              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">UPI</span>
+              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Net Banking</span>
+              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Visa / MC</span>
+              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">RuPay</span>
+              <span className="px-2 py-1 rounded bg-muted/70 font-mono text-[11px]">Wallets</span>
             </div>
           </div>
 

@@ -113,7 +113,7 @@ export default function PrivacyPage() {
                   <strong>Account Information:</strong> When you sign up, we collect your name, business email address, company name, and password hash.
                 </li>
                 <li>
-                  <strong>Billing &amp; Payment Data:</strong> Payment card details and billing addresses are collected and processed securely directly by our Merchant of Record, <strong>Paddle.com</strong>. We do not store or process raw credit card numbers on our servers.
+                  <strong>Billing &amp; Payment Data:</strong> Payment card details and billing addresses are collected and processed securely by our payment processor, <strong>Razorpay</strong>. We do not store or process raw credit card numbers on our servers.
                 </li>
                 <li>
                   <strong>Platform Usage &amp; Log Data:</strong> Information such as your IP address, browser user-agent, operating system, and feature interactions to monitor service reliability and prevent fraud.
@@ -130,7 +130,7 @@ export default function PrivacyPage() {
               <ul className="list-disc pl-5 space-y-1.5">
                 <li>To provision and maintain your user account and SaaS workspaces.</li>
                 <li>To enable search and pipeline tracking features within the application.</li>
-                <li>To process payments and manage recurring subscription renewals through Paddle.</li>
+                <li>To process payments and manage recurring subscription renewals through Razorpay.</li>
                 <li>To send operational announcements, service updates, and billing receipts.</li>
                 <li>To ensure compliance with security protocols and prevent abusive behavior.</li>
               </ul>
@@ -141,9 +141,9 @@ export default function PrivacyPage() {
               <p>We work with trusted third-party providers to operate our cloud infrastructure:</p>
               <ul className="list-disc pl-5 space-y-2">
                 <li>
-                  <strong>Paddle.com (Merchant of Record):</strong> Handles all checkout processes, invoice issuance, tax compliance, and payment security. You can read Paddle&apos;s privacy policy at{" "}
-                  <a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-primary underline">
-                    paddle.com/legal/privacy
+                  <strong>Razorpay (Payment Processor):</strong> Handles all checkout processes, invoice issuance, and payment security. Razorpay is PCI-DSS Level 1 compliant and uses 256-bit SSL encryption. You can read Razorpay&apos;s privacy policy at{" "}
+                  <a href="https://razorpay.com/privacy/" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                    razorpay.com/privacy
                   </a>.
                 </li>
                 <li>

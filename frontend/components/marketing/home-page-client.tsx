@@ -30,6 +30,7 @@ import {
 import { useCountUp } from "@/lib/hooks/use-count-up";
 import dynamic from "next/dynamic";
 import { mockLeads } from "@/lib/mock/leads";
+import { SocialGrowthAutomationSection } from "@/components/marketing/social-growth-automation";
 
 const InteractiveMap = dynamic(
   () => import("@/components/marketing/interactive-map").then((mod) => mod.InteractiveMap),
@@ -238,7 +239,7 @@ const testimonials = [
 const tiers = [
   {
     name: "Free",
-    price: "$0",
+    price: "₹0",
     period: "/month",
     annualNote: "Free forever · No card required",
     features: ["3 free verified leads", "1 team seat included", "Basic global searches", "Standard CRM pipeline"],
@@ -248,9 +249,9 @@ const tiers = [
   },
   {
     name: "Growth",
-    price: "$19",
+    price: "₹1,900",
     period: "/month",
-    annualNote: "or $15/mo billed annually (Save 20%)",
+    annualNote: "or ₹1,500/mo billed annually (Save 20%)",
     features: ["500 leads / month", "3 seats included", "Standard AI Discovery", "Email outreach suite", "Standard analytics"],
     cta: "Get Started with Growth",
     href: `${APP_LOGIN_URL}?plan=growth`,
@@ -258,9 +259,9 @@ const tiers = [
   },
   {
     name: "Pro",
-    price: "$49",
+    price: "₹4,900",
     period: "/month",
-    annualNote: "or $39/mo billed annually (Save 20%)",
+    annualNote: "or ₹3,900/mo billed annually (Save 20%)",
     features: ["Unlimited leads", "10 seats included", "AI Persona Discovery", "Call + email outreach", "Full analytics & priority support"],
     cta: "Get Started with Pro",
     href: `${APP_LOGIN_URL}?plan=pro`,
@@ -268,9 +269,9 @@ const tiers = [
   },
   {
     name: "Enterprise",
-    price: "$149",
+    price: "₹14,900",
     period: "/month",
-    annualNote: "or $119/mo billed annually",
+    annualNote: "or ₹11,900/mo billed annually",
     features: ["Unlimited everything", "Unlimited team seats", "Custom API Integrations", "Dedicated manager", "SSO & 99.9% SLA"],
     cta: "Talk to Sales",
     href: "/contact?plan=enterprise",
@@ -415,6 +416,7 @@ export function HomePageClient() {
         <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
           {[
             { label: "Product", href: "#product" },
+            { label: "Growth OS", href: "#growth-automation" },
             { label: "How It Works", href: "#how-it-works" },
             { label: "Industries", href: "#industries" },
             { label: "Pricing", href: "/pricing" },
@@ -653,6 +655,9 @@ export function HomePageClient() {
           </div>
         </div>
       </section>
+
+      {/* ══════════════════ SECOND SECTION: AUTONOMOUS SOCIAL AUTOMATION & GROWTH OS ══════════════════ */}
+      <SocialGrowthAutomationSection />
 
       {/* ══════════════════ HOW IT WORKS — PROCESS ══════════════════ */}
       <section id="how-it-works" className="mx-auto max-w-7xl px-6 py-24">
@@ -1014,7 +1019,7 @@ export function HomePageClient() {
               Predictable pricing for <span className="gradient-text">every team</span>
             </h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              All plans include global data coverage and pipeline CRM. Zero per-seat lock-in. Billed securely via Paddle.
+              All plans include global data coverage and pipeline CRM. Zero per-seat lock-in. Billed securely via Razorpay.
             </p>
           </motion.div>
 
@@ -1224,7 +1229,7 @@ export function HomePageClient() {
             <div className="space-y-1">
               <p>© 2026 GetYourClients, Inc. All rights reserved.</p>
               <p className="text-[11px] text-muted-foreground/80">
-                Our order process is conducted by our online reseller Paddle.com. Paddle.com is the Merchant of Record for all our orders. Paddle provides all customer service inquiries and handles returns.
+                Payments are securely processed by Razorpay. All transactions are PCI-DSS compliant and encrypted with 256-bit SSL.
               </p>
             </div>
             <span className="manifest-chip shrink-0 self-start sm:self-center">BUILT FOR 190+ MARKETS</span>
